@@ -1,0 +1,325 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<style type="text/css" media="screen">
+.element {
+	visibility:hidden;
+}
+
+.hidden {
+	visibility:visible;
+}
+
+.time-range-container {
+	padding:10px;
+}
+
+.year-container {
+	padding:10px;
+}
+
+.controls-container {
+	padding:10px;
+}
+body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-family:arial,verdana,sans-serif;font-size:12px;font-weight:400;line-height:150%;text-decoration:none;margin:0;padding:0}input{color:#333;font-family:Lora,Georgia,"Times New Roman",Times}input[type=text],select,textarea{-moz-box-shadow:inset 0 1px 2px 1px #eee;-webkit-box-shadow:inset 0 1px 2px 1px #eee;background:#fff;border:1px solid #bbb;box-shadow:inset 0 1px 1px 1px #eee;color:#bbb;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;text-transform:uppercase;vertical-align:middle;margin:5px 2px 0 0;padding:12px 15px}textarea{color:#333;font-family:Lora,Georgia,"Times New Roman",Times;font-size:12px;text-transform:none}li,ol,ul{margin:0;padding:0}ol li{list-style-type:decimal}.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.clearfix{display:inline-block}* html .clearfix{height:1%}a,a:visited{color:#3C8DE3;text-decoration:none}a:hover{color:#222;text-decoration:none}a img{border:none}body{background-color:#fff}#wrap{margin:0 auto 10px}.wrap{width:996px;margin:0 auto}#header{min-height:100px;overflow:hidden;width:100%;min-width:960px;background-color:#fff;background:url(images/headbg2.png);background-repeat:repeat-x;margin:0 auto}#title-area{float:left;overflow:hidden;width:350px;height:80px;background:url(images/flasktra.png);background-repeat:no-repeat;padding:10px 0 0}#title{color:#fff;font-family:verdana,'Arial Black',Gadget,sans-serif;font-style:italic;font-weight:700;font-size:28px;line-height:1.25;font-smooth:always;margin:0;padding:0 0 0 70px}#title a,#title a:hover{color:#fff;text-decoration:none}#description{color:#fff;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;text-transform:uppercase;padding:0 0 0 70px}#header .widget-area{float:right;width:600px;margin:10px 0 0}.header-image #title-area,.header-image #title,.header-image #title a{display:block;float:left;height:135px;overflow:hidden;text-indent:-9999px;width:350px;padding:0}.header-image #description{display:block;overflow:hidden}.menu-primary,.menu-secondary{clear:both;color:#222;overflow:hidden;width:100%;background:url(images/gray-texture.jpg);margin:0 0 20px}.menu-primary ul,.menu-secondary ul{float:left;width:100%}.menu-primary li,.menu-secondary li,#header .menu li{float:left;list-style-type:none}.menu-primary a,.menu-secondary a,#header .menu a{color:#222;display:block;position:relative;text-decoration:none;padding:6px 15px 5px}.menu-primary li li a,.menu-primary li li a:link,.menu-primary li li a:visited,.menu-secondary li li a,.menu-secondary li li a:link,.menu-secondary li li a:visited,#header .menu li li a,#header .menu li li a:link,#header .menu li li a:visited{background-color:#f5f5f5;border-bottom:1px solid #ddd;border-top:1px solid #fff;color:#222;font-size:14px;position:relative;text-align:left;text-shadow:#fff 1px 1px;text-transform:none;width:138px;padding:10px 15px}.menu-primary li ul,.menu-secondary li ul,#header .menu li ul{-moz-box-shadow:0 1px 3px #ccc;-webkit-box-shadow:0 1px 3px #ccc;box-shadow:0 1px 3px #ccc;height:auto;left:-9999px;position:absolute;width:168px;z-index:9999;margin:0 0 0 1px}.menu-primary li ul a,.menu-secondary li ul a,#header .menu li ul a{width:130px}.menu-primary li ul ul,.menu-secondary li ul ul,#header .menu li ul ul{margin:-44px 0 0 168px}ul.menu li:hover>ul,ul.menu li.sfhover ul,#header .menu li:hover>ul,#header .menu li.sfhover ul{left:auto}.menu-primary li a.sf-with-ul,.menu-secondary li a.sf-with-ul,#header .menu li a.sf-with-ul{padding-right:25px}.menu li a .sf-sub-indicator,.menu li li a .sf-sub-indicator,.menu li li li a .sf-sub-indicator{background:url(images/arrow-down.png) no-repeat;height:16px;position:absolute;right:0;text-indent:-9999px;top:17px;width:16px}#wpadminbar li:hover ul ul{left:0}.menu li.right{float:right;padding:6px 15px 5px}.menu li.right a{background:none;border:none;color:#222;display:inline;text-decoration:none}.menu li.search{padding:0 10px}.menu li.rss a{background:url(images/rss.png) no-repeat center left;margin:0 0 0 10px;padding:0 0 0 16px}.menu li.twitter a{background:url(images/twitter-nav.png) no-repeat center left;padding:0 0 0 20px}#inner{overflow:hidden;width:996px;margin:10px auto 0}.balance-landing #inner{margin:20px auto 0}.taxonomy-description{margin:0 0 30px;padding:10px}#content-sidebar-wrap{float:left;width:770px}.content-sidebar #content-sidebar-wrap,.full-width-content #content-sidebar-wrap,.sidebar-content #content-sidebar-wrap{width:996px;margin:0;padding:0}.balance-landing #content-sidebar-wrap{float:none;width:700px;margin:0 auto}.sidebar-content-sidebar #content-sidebar-wrap,.sidebar-sidebar-content #content-sidebar-wrap{float:right;margin:0;padding:0}.content-sidebar #content,.sidebar-content #content{width:650px;max-width:650px!important;background-color:#f5f5f5;border-radius:30px 30px;border:1px solid #f5f5f5;padding:6px}.balance-landing #content{width:700px}blockquote{background:url(images/quote-icon.png) no-repeat;color:#666;font-size:18px;font-style:italic;margin:20px 0;padding:0 0 0 90px}blockquote p{color:#666;font-size:18px;font-style:italic}.post{background:url(images/dashes.png) repeat-x bottom;margin:0 0 50px;padding:0 0 50px}.entry-content{position:relative;margin:0 0 35px}p.subscribe-to-comments{padding:20px 0 10px}.clear{clear:both}.clear-line{border-bottom:1px solid #ddd;clear:both;margin:0 0 20px}.more-link{border-bottom:5px solid #d05353;bottom:-53px;color:#d05353;display:block;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;font-weight:700;left:0;position:absolute;text-align:center;text-decoration:none;text-transform:uppercase;width:120px;z-index:100;padding:0 0 8px}.seven-sixteenths,.two-sixteenths{float:left;padding-left:2%;margin:0 0 10px}.seven-sixteenths{width:42%}.two-sixteenths{width:10%}.five-sixths,.four-fifths,.four-sixths,.one-fifth,.one-fourth,.one-half,.one-sixth,.one-third,.three-fifths,.three-fourths,.three-sixths,.two-fifths,.two-fourths,.two-sixths,.two-thirds{float:left;padding-left:3%;margin:0 0 20px}.one-half,.three-sixths,.two-fourths{width:48%;}.one-third,.two-sixths{width:31%}.four-sixths,.two-thirds{width:65%}.one-fourth{width:22.5%}.three-fourths{width:73.5%}.one-fifth{width:17.4%}.two-fifths{width:37.8%}.three-fifths{width:58.2%}.four-fifths{width:78.6%}.one-sixth{width:14%}.five-sixths{width:82%}.first{clear:both;padding-left:0}.genesis-grid-even{float:right;width:48%}.genesis-grid-odd{clear:both;float:left;width:48%}h1{color:#3C8DE3;font-size:1.6em;font-weight:400;text-align:center;line-height:1.4em;font-family:arial,verdana,sans-serif}h2{font:bold 10pt verdana;color:#5C639B;margin:0;padding:0}.taxonomy-description h1,.widget-area h2,.widget-area h2 a{font-size:18px;margin:0 0 5px}.genesis-grid h2,.genesis-grid h2 a{font-size:28px}.page-template-page_portfolio-php h2,.page-template-page_portfolio-php h2 a,.page-template-page_portfolio-php h2 a:visited{font-size:20px;text-align:center;margin:10px 0}h3{font-size:26px}h4{font-size:30px}.widget-area h4{color:#888;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;text-align:center;margin:0 0 15px;padding:0}.widget-area h4 a{text-decoration:none}h5{font-size:24px}h6{font-size:20px}.entry-content ol,.entry-content ul{margin:0;padding:0 0 25px}.archive-page ul li,.entry-content ul li{list-style-type:disc;font-family:'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;margin:0 0 0 30px;padding:5px}.entry-content ol li{margin:0 0 0 35px}#content .post-info{border-bottom:1px solid #ddd;color:#888;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;text-transform:uppercase;margin:0 0 25px;padding:0 0 10px}#content .post-info .author a{border-bottom:5px solid #d05353;padding:0 8px 10px}.post-meta{border-top:1px solid #ddd;clear:both;color:#888;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;line-height:2;position:relative;text-transform:uppercase;margin:50px 0 0;padding:15px 0 0}.author-box{background:url(images/gray-texture.jpg);color:#222;font-size:14px;overflow:hidden;text-shadow:#fff 1px 1px;margin:0 0 40px;padding:40px}.author-box p{color:#222;font-size:14px;text-shadow:#fff 1px 1px}.sticky{margin:0 0 40px;padding:20px}.archive-page{float:left;width:45%;padding:20px 0}.post-comments{position:absolute;top:-27px;right:0}.post-comments a{background:url(images/comment-icon.jpg) no-repeat 0 0;color:#888;padding:0 0 0 20px}.tags{display:block;margin:10px 0 0}img{height:auto;max-width:100%}.avatar{padding:5px}.author-box .avatar{background-color:#fff;border:none;float:left;height:80px;width:80px;margin:0 30px 0 0}.post-image{margin:0 10px 10px 0}.comment-list li .avatar{background-color:#fff;border:none;float:left;height:33px;width:33px;margin:0 15px 0 0;padding:3px}img.centered,.aligncenter{display:block;margin:0 auto 10px}img.alignnone{display:inline;margin:0 0 20px}img.alignleft{display:inline;margin:0 25px 20px 0}img.alignright{display:inline;margin:0 0 20px 25px}.alignleft{float:left;margin:0 25px 0 0}.alignright{float:right;margin:0 0 0 25px}.wp-caption{text-align:center;padding:0}p.wp-caption-text{font-size:10px;padding:0;width:298px}.wp-smiley,.wp-wink{border:none;float:none}.navigation{overflow:hidden;width:100%;padding:20px 0}.navigation li{display:inline}.navigation li a,.navigation li.disabled,.navigation li a:hover,.navigation li.active a{-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#f5f5f5;border-radius:3px;color:#777;font-size:11px;font-family:Helvetica,Arial,Tahoma,sans-serif;font-weight:700;text-decoration:none;padding:8px 12px}.navigation li a:hover,.navigation li.active a{background-color:#eee}.sidebar{display:inline;float:right;font-size:13px;width:316px}#sidebar-alt{float:left;width:150px}.sidebar .widget{border-bottom:1px solid #ddd;margin:0 0 30px;padding:0 0 30px}.sidebar .widget,.sidebar .widget p{color:#000;font:12px arial,sans-serif bold;line-height:160%;text-align:justify;background-color:#f5f5f5;border-radius:30px 30px;padding:4px}.sidebar.widget-area ul li,#footer-widgets .widget-area ul li{background:url(images/bullet.png) no-repeat 10px 7px;list-style-type:none;word-wrap:break-word;padding:0 0 7px 30px}#cat,.widget_archive select{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;display:inline;font-size:12px;width:100%;margin:10px 0}.featuredpage,.featuredpost{clear:both;overflow:hidden;margin:0 0 15px}.featuredpage .page,.featuredpost .post{border-bottom:none;position:relative;overflow:hidden;margin:0 0 15px;padding:0 0 40px}.page-template-page_portfolio-php .featuredpage .page,.page-template-page_portfolio-php .featuredpost .post{float:left;overflow:hidden;width:300px;margin:0 10px 30px;padding:0 0 20px}.featuredpage .page .more-link,.featuredpost .post .more-link{bottom:0}.featuredpost .post{padding:0 0 70px}.featuredpost .post .more-link{bottom:30px}.more-from-category{padding:5px 15px 0}.user-profile{overflow:hidden}input[type=button],input[type=submit]{-moz-border-radius:5px;-webkit-border-radius:5px;background:url(images/dashes-bg.png) #d05353;border-bottom:1px solid #925252;border-left:none;border-right:1px solid #925252;border-radius:5px;border-top:none;color:#fff;cursor:pointer;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:11px;font-weight:700;text-decoration:none;text-shadow:#9e3f3f -1px -1px;text-transform:uppercase;padding:8px 10px}input:hover[type=button],input:hover[type=submit]{background:url(images/dashes-bg.png) #be4242;text-decoration:none}#header .searchform{float:right;padding:20px 0 0}.s{-moz-box-shadow:inset 0 1px 2px 1px #eee;-webkit-box-shadow:inset 0 1px 2px 1px #eee;background:#fff;border:1px solid #bbb;box-shadow:inset 0 1px 1px 1px #eee;color:#bbb;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;text-transform:uppercase;vertical-align:middle;width:180px;margin:5px 2px 0 0;padding:12px 15px}.searchsubmit{background:url(images/search-icon.png) no-repeat!important;border:none!important;height:38px;vertical-align:middle;width:38px;margin:2px 0 0 10px}.menu-primary .s{background-color:#fff;margin:2px 2px 0 0}#footer-widgets{background:url(images/gray-texture.jpg);clear:both;overflow:hidden;margin:0 0 20px;padding:25px 0}#footer-widgets .wrap{font-size:13px;overflow:hidden;width:996px;margin:0 auto;padding:0}#footer-widgets .widget{background:none;border:none;text-shadow:#fff 1px 1px;margin:0 0 20px;padding:0}#footer-widgets .widget,#footer-widgets .widget p{color:#777;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:11px}#footer-widgets .widget p{margin:0 0 15px}#footer-widgets #wp-calendar thead,#footer-widgets #wp-calendar td{background:none}.footer-widgets-1{float:left;width:295px;margin:0 40px 0 0}.footer-widgets-2{float:left;width:290px}.footer-widgets-3{float:right;width:295px}#footer{clear:both;color:#888;font-family:Arial,Tahoma,sans-serif;font-size:10px;overflow:hidden;text-transform:uppercase;padding:20px 0}#footer p{color:#888;font-family:Arial,Tahoma,sans-serif;font-size:10px}#footer .gototop{float:left;width:200px;padding:0 0 0 5px}#footer .gototop a{background:url(images/return-top-arrow.png) no-repeat center left;padding:5px 0 5px 36px}#footer .creds{float:right;text-align:right;width:740px;padding:0 10px 0 0}#comments,#respond{font-size:13px;overflow:hidden;margin:0 0 15px;text-align:left}#author,#comment,#email,#url{font-size:16px;width:250px;margin:10px 5px 0 0;padding:5px}#comment{height:150px;width:98%;margin:10px 0}.ping-list{margin:0 0 40px}.comment-list ol,.ping-list ol{padding:10px}.comment-list li,.ping-list li{font-weight:700;text-shadow:#fff 1px 1px;margin:15px 0;padding:35px 35px 15px}.comment-list li ul li{background:#fff;list-style-type:none}.comment-list p,.ping-list p{margin:10px 5px 10px 0}.comment-list cite,.comment-list .says,.ping-list cite{color:#555;font-family:Verdana,Helvetica,Arial,Tahoma,sans-serif;font-size:11px;font-style:normal;text-transform:uppercase}.commentmetadata{font-family:Verdana,Helvetica,Arial,Tahoma,sans-serif;font-size:9px;font-style:normal;font-weight:400;text-transform:uppercase}.comment-content{margin:20px 0}.comment-reply-link{border-bottom:5px solid #d05353;font-family:Verdana,Arial,Tahoma,sans-serif;font-size:9px;text-decoration:none;text-transform:uppercase;padding:0 8px 15px}.nocomments{text-align:center}div.gform_wrapper input,div.gform_wrapper select,div.gform_wrapper textarea{color:#222;font-size:16px!important;padding:4px 5px!important}div.gform_footer input.button{color:#fff;font-size:11px!important;padding:8px 10px!important}div.gform_wrapper .ginput_complex label{font-size:12px}div.gform_wrapper .gform_footer{border:none;margin:0;padding:0}.balance-blue a:hover,.balance-blue h2 a,.balance-blue h2 a:visited,.balance-blue #header .menu a,.balance-blue .menu-primary a,.balance-blue .menu-secondary a{color:#222}.balance-blue .more-link,.balance-blue #content .post-info .author a,.balance-blue .comment-reply-link{border-bottom:5px solid #6eadce}.balance-blue input[type=button],.balance-blue input[type=submit],.balance-blue .enews-widget,.balance-blue .home-featured-right{background:#6eadce url(images/dashes-bg.png)!important;text-shadow:#598ca7 -1px -1px!important}.balance-blue input[type=button],.balance-blue input[type=submit]{border-bottom:1px solid #4f7d94;border-right:1px solid #4f7d94}.balance-blue input:hover[type=button],.balance-blue input:hover[type=submit]{background:#649dbb url(images/dashes-bg.png)!important}.balance-blue .home-featured-right input[type=text],.balance-blue .enews #subbox{border-left:1px solid #4f7d94;border-top:1px solid #4f7d94}.balance-blue .enews p,.balance-blue .enews h4.widgettitle,.balance-blue .home-featured-right,.balance-blue .home-featured-right p,.balance-blue .home-featured-right h4.widgettitle{text-shadow:#598ca7 -1px -1px!important}.balance-blue .post-comments a{color:#888}.balance-blue input[type=submit].searchsubmit{background:url(images/blue/search-icon.png) no-repeat!important;border:none!important}.balance-blue .home-featured-right input[type=submit]{background:url(images/email-button.png) no-repeat!important}.balance-blue #subbutton{background:#fff!important;text-shadow:none!important}.author{color:gray;font:11px italic verdana,arial,sans-serif;padding:0 0 5px}#pagenav{padding:0 0 12px}#pagenav a,a:visited{color:#3C8DE3;text-decoration:none;font-family:verdana,sans-serif;font-size:11px}#pagenav a:hover{color:#000;text-decoration:none;font-family:verdana,sans-serif;font-size:11px}.datatop{font-size:8pt;height:11px;width:290px;padding:1px 5px}.elemgl{font:normal 10pt verdana;color:#5C639B}.heading,.headingt{color:#3C8DE3;font-size:14px;font-weight:700;font-family:tahoma,verdana,sans-serif;font-variant:small-caps;margin:0;padding:0px 5px 5px 0}.headingt{color:#000;text-align:center}.wm{text-align:center;background-color:#EAEAEA;width:100%;border-radius:6px 6px;margin:0}html[xmlns] .clearfix,#comments .navigation{display:block}::-moz-selection,::selection{background-color:#222;color:#fff}.header-full-width #title-area,.header-full-width #title,.header-full-width #title a,.full-width-content #content{width:996px}#header .menu,.sidebar-content #content,.sidebar-sidebar-content #content,#content .post-info .date,.content-sidebar-sidebar #sidebar-alt,.menu-primary .searchform{float:right}.menu-primary li a:active,.menu-primary li a:hover,.menu-primary .current_page_item a,.menu-primary .current-cat a,.menu-primary .current-menu-item a,.menu-secondary li a:active,.menu-secondary li a:hover,.menu-secondary .current_page_item a,.menu-secondary .current-cat a,.menu-secondary .current-menu-item a,#header .menu li a:active,#header .menu li a:hover,#header .menu .current_page_item a,#header .menu .current-cat a,#header .menu .current-menu-item a,.menu-primary li li a:active,.menu-primary li li a:hover,.menu-secondary li li a:active,.menu-secondary li li a:hover,#header .menu li li a:active,#header .menu li li a:hover,.post-comments a:hover{color:#d05353}.menu li:hover ul ul,.menu li.sfhover ul ul,li:hover ul ul,li.sfhover ul ul{left:-9999px}.menu li:hover,.menu li.sfhover,li:hover,li.sfhover{position:static}.menu li.right a:hover,h2 a:hover{color:#d05353;text-decoration:none}#content,.sidebar-content #sidebar,.sidebar-sidebar-content #sidebar{float:left}.entry-content p,.page-template-page_portfolio-php .featuredpage img,.page-template-page_portfolio-php .featuredpost img,div.gform_wrapper li,div.gform_wrapper form li{margin:0 0 10px}.more-link:hover,.comment-reply-link:hover{border-bottom:5px solid #222;text-decoration:none}.entry-content ol,.sidebar .widget p,.sidebar.widget-area ul,.sidebar.widget-area ul ul,#footer-widgets .widget-area ul,#footer-widgets .widget-area ul ul,#footer-widgets ul{margin:0}.archive-page ul ul,.entry-content ol ol,.entry-content ul ul,.featuredpage img,.featuredpost img,.post-image,.sidebar .searchform{padding:0}#content .post-info a,.post-meta a{font-weight:700;text-decoration:none}#content .post-info .author a:hover,.balance-blue #content .post-info .author a:hover,.balance-blue .more-link:hover,.balance-blue .comment-reply-link:hover{border-bottom:5px solid #222}.sidebar p,#comments p,#respond p{font-size:13px}.comment-list,.comment-list li{list-style:none}.comment-list li ul li li,.thread-alt,.thread-even{background:url(images/gray-texture.jpg)}.balance-blue a,.balance-blue a:visited,.balance-blue .post-comments a:hover,.balance-blue #header .menu a:hover,.balance-blue #header .menu .current_page_item a,.balance-blue #header .menu .current-cat a,.balance-blue #header .menu .current-menu-item a,.balance-blue .menu-primary a:hover,.balance-blue .menu-primary .current_page_item a,.balance-blue .menu-primary .current-cat a,.balance-blue .menu-primary .current-menu-item a,.balance-blue .menu-secondary a:hover,.balance-blue .menu-secondary .current_page_item a,.balance-blue .menu-secondary .current-cat a,.balance-blue .menu-secondary .current-menu-item a,.balance-blue .more-link,.balance-blue h2 a:hover{color:#6eadce}.elemglb,td .elemglb{font:normal 8pt arial;color:#5c639b}.atnor{text-align:right;color:#000;font:500 12px arial,sans-serif}.elnam{font:600 18px arial,sans-serif}.atwei{font:12px verdana,sans-serif}.elnam,.atwei{text-align:center;color:#000}.alkali,.alkalie,.onm,.ometals,.tmetals,.rare,.ngases,.metalloid,.halogens,.unnamed{float:left;width:54px;padding:5px;border-right:254px solid #f5f5f5}.onm{background:#f96}.ometals{background:#cdeb8b}.alkali{background:#dda0dd;}.alkalie{background:#90c7ff;}.tmetals{background:#FFF28E}.rare{background:#FCEFF0}.ngases{background:#e6e6fa}.metalloid{background:#c79810}.halogens{background:#ebdca9}.unnamed{background:#fff}.imgsutube{float:left;padding-right:10px}.facts{background:#ffffad;border-radius:30px 30px;margin-bottom:20px;padding:5px;min-height:20px}.lhsdata{float:left;width:300px;padding:0 10px 0 0}.rhsdata{float:left;width:300px;padding:0 0 0 0}.rhsdatapic{float:left;width:300px;padding:0px 0 0 0}.spacer{clear:both}.topad{float:left;width:310px;position:relative;top:-18px}table.navbar td{border:1px solid #FFF;height:40px;width:45px}table.navbar td a,table.navbar td a.he{display:block;font-size:10pt;font-weight:700;height:35px;padding:3px 5px;text-align:center;text-decoration:none;width:38px}.info{background-color:#f5f5f5;color:#333;text-align:center}table.navbar td a:link,table.navbar td a:visited{background-color:#666;color:#fff}table.navbar td a:hover,table.navbar td a:active{background-color:#cf0;color:#fff}table.navbar td a.ngases:link,table.navbar td a.ngases:visited{background-color:#e6e6fa;border:#0f5782 1px solid;color:green}table.navbar td a.onm:link,table.navbar td a.onm:visited{background-color:#f96;border:#0f5782 1px solid;color:#000}table.navbar td a.onm-gases:link,table.navbar td a.onm-gases:visited{background-color:#f96;border:#0f5782 1px solid;color:green}.navbar td a.alkali:link,.navbar td a.alkali:visited{background-color:#dda0dd;border:#0f5782 1px solid;color:#000}.navbar td a.alkali-liquid:link,.navbar td a.alkali-liquid:visited{background-color:#dda0dd;border:#0f5782 1px solid;color:#00f}.navbar td a.actlan:link,.navbar td a.actlan:visited{background-color:#FCEFF0;border:#0f5782 1px solid;color:#000}.navbar td a.alkalie:link,.navbar td a.alkalie:visited{background-color:#90c7ff;border:#0f5782 1px solid;color:#000}.navbar td a.ometals:link,.navbar td a.ometals:visited{background-color:#cdeb8b;border:#0f5782 1px solid;color:#000}.navbar td a.ometals-liquid:link,.navbar td a.ometals-liquid:visited{background-color:#cdeb8b;border:#0f5782 1px solid;color:#00f}.navbar td a.metalloid:link,.navbar td a.metalloid:visited{background-color:#c79810;border:#0f5782 1px solid;color:#000}.navbar td a.halogens:link,.navbar td a.halogens:visited{background-color:#ebdca9;border:#0f5782 1px solid;color:#000}.navbar td a.halogens-liquid:link,.navbar td a.halogens-liquid:visited{background-color:#ebdca9;border:#0f5782 1px solid;color:#00f}.navbar td a.halogens-gases:link,.navbar td a.halogens-gases:visited{background-color:#ebdca9;border:#0f5782 1px solid;color:green}.navbar td a.tmetals:link,.navbar td a.tmetals:visited{background-color:#FFF28E;border:#0f5782 1px solid;color:#000}.navbar td a.tmetals-liquid:link,.navbar td a.tmetals-liquid:visited{background-color:#FFF28E;border:#0f5782 1px solid;color:#00f}.navbar td a.tmetals-synthetic:link,.navbar td a.tmetals-synthetic:visited{background-color:#FFF28E;border:#0f5782 1px solid;color:#a52a2a}.navbar td a.rare:link,.navbar td a.rare:visited{background-color:#FCEFF0;border:#0f5782 1px solid;color:#000}.navbar td a.rare-synthetic:link,.navbar td a.rare-synthetic:visited{background-color:#FCEFF0;border:#0f5782 1px solid;color:#a52a2a}.navbar td a.unnamed:link,.navbar td a.unnamed:visited{background-color:#fff;border:#0f5782 1px solid;color:#a52a2a}td .liquid,td .solid,td .gas,td .synthetic{background-color:#fff;border:#0f5782 0 solid;display:block;font-size:10pt;font-weight:700;height:35px;padding:3px 5px;text-align:center;text-decoration:none;width:68px}td .liquid{color:#00f}td .solid{color:#000}td .gas{color:#006400}td .synthetic{color:#a52a2a}td .alkali,td .alkalie,td .ometals,td .metalloid,td .halogens,td .tmetals,td .rare,td .ngases,td .onm{border:#0f5782 0 solid;color:#000;display:block;font-size:10pt;font-weight:400;height:35px;padding:3px 5px;text-align:center;text-decoration:none;width:60px}td .ngases{background-color:#e6e6fa}td .alkali{background-color:#dda0dd}td .alkalie{background-color:#90c7ff}td .ometals{background-color:#cdeb8b}td .metalloid{background-color:#c79810}td .halogens{background-color:#ebdca9}td .tmetals{background-color:#FFF28E}td .rare{background-color:#FCEFF0}td .onm{background-color:#f96}table.navbar1 td{border:1px solid #FFF;height:32px;width:24px}table.navbar1 td a,table.navbar td a.he{display:block;font-size:8pt;font-weight:700;height:30px;padding:0;text-align:center;text-decoration:none;width:22px}.navbar td a.blank:link,.navbar td a.blank:visited{background-color:#fff;border:#0f5782 1px solid;color:#000}table.navbar,table.navbar1{border-collapse:collapse;border-spacing:1px;line-height:120%}table.navbar td a.ngases:hover,table.navbar td a.ngases:active,table.navbar td a.onm-gases:hover,table.navbar td a.onm-gases:active,.navbar td a.halogens-gases:hover,.navbar td a.halogens-gases:active{background-color:#cf0;border:#0f5782 1px solid;color:green}table.navbar td a.onm:hover,table.navbar td a.onm:active,.navbar td a.alkali:hover,.navbar td a.alkali:active,.navbar td a.alkalie:hover,.navbar td a.alkalie:active,.navbar td a.ometals:hover,.navbar td a.ometals:active,.navbar td a.metalloid:hover,.navbar td a.metalloid:active,.navbar td a.halogens:hover,.navbar td a.halogens:active,.navbar td a.tmetals:hover,.navbar td a.tmetals:active,.navbar td a.rare:hover,.navbar td a.rare:active,.navbar td a.actlan:hover,.navbar td a.actlan:active,.navbar td a.blank:hover,.navbar td a.blank:active{background-color:#cf0;border:#0f5782 1px solid;color:#000}.navbar td a.alkali-liquid:hover,.navbar td a.alkali-liquid:active,.navbar td a.ometals-liquid:hover,.navbar td a.ometals-liquid:active,.navbar td a.halogens-liquid:hover,.navbar td a.halogens-liquid:active,.navbar td a.tmetals-liquid:hover,.navbar td a.tmetals-liquid:active{background-color:#cf0;border:#0f5782 1px solid;color:#00f}.navbar td a.tmetals-synthetic:hover,.navbar td a.tmetals-synthetic:active,.navbar td a.rare-synthetic:hover,.navbar td a.rare-synthetic:active,.navbar td a.unnamed:hover,.navbar td a.unnamed:active{background-color:#cf0;border:#0f5782 1px solid;color:#fff}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<body>
+
+	<div class="time-range-container">
+		<input style="width: 940px;" id="time-range" type="range" min="-9000" max="2015" value="-9000" step="1">
+	</div>
+	<div class="year-container">
+	  <div style="font-size:20px;">Year: <span id="year"></span></div>
+	</div>
+	<div class="controls-container" style="padding:10px">
+	  <div>Time: <span style="font-size:20px;" id="time"></span></div>
+	  <input type="button" value="start" onclick="start();">
+	  <input type="button" value="pause" onclick="pause();">
+	  <input type="button" value="reset" onclick="reset()">
+	</div>
+	<table border="1" cellpadding="0" cellspacing="0" class="navbar">
+		<tr align="center">
+		<td class="info">Group</td>
+		<td class="info">1</td>
+		<td class="info">2</td>
+		<td class="info">3</td>
+		<td class="info">4</td>
+		<td class="info">5</td>
+		<td class="info">6</td>
+		<td class="info">7</td>
+		<td class="info">8</td>
+		<td class="info">9</td>
+		<td class="info">10</td>
+		<td class="info">11</td>
+		<td class="info">12</td>
+		<td class="info">13</td>
+		<td class="info">14</td>
+		<td class="info">15</td>
+		<td class="info">16</td>
+		<td class="info">17</td>
+		<td class="info">18</td>
+		</tr>
+		<tr>
+		<td class="info">Period<br/>1</td>
+		<td><a discovery-year=1766 class="element onm-gases" href="http://en.wikipedia.org/wiki/hydrogen" title="hydrogen"><sup>1</sup><br/>H</a> </td>
+		<td colspan="16"></td>
+		<td><a discovery-year=1868 class="element ngases" href="http://en.wikipedia.org/wiki/helium" title="helium "><sup>2</sup><br/>He</a> </td>
+		</tr>
+		<tr>
+		<td class="info">2</td>
+		<td><a discovery-year=1817 class="element alkali" href="http://en.wikipedia.org/wiki/lithium" title="lithium "><sup>3</sup><br/>Li</a> </td>
+		<td><a discovery-year=1798 class="element alkalie" href="http://en.wikipedia.org/wiki/beryllium" title="beryllium "><sup>4</sup><br/>Be</a> </td>
+		<td colspan="10" rowspan="2"> </td>
+		<td><a discovery-year=1808 class="element metalloid" href="http://en.wikipedia.org/wiki/boron" title="boron "><sup>5</sup><br/>B</a> </td>
+		<td><a discovery-year=-3750 class="element onm" href="http://en.wikipedia.org/wiki/carbon" title="carbon "><sup>6</sup><br/>C</a> </td>
+		<td><a discovery-year=1772 class="element onm-gases" href="http://en.wikipedia.org/wiki/nitrogen" title="nitrogen "><sup>7</sup><br/>N</a> </td>
+		<td><a discovery-year=1771 class="element onm-gases" href="http://en.wikipedia.org/wiki/oxygen" title="oxygen "><sup>8</sup><br/>O</a> </td>
+		<td><a discovery-year=1810 class="element halogens-gases" href="http://en.wikipedia.org/wiki/fluorine" title="fluorine "><sup>9</sup><br/>F</a> </td>
+		<td><a discovery-year=1898 class="element ngases" href="http://en.wikipedia.org/wiki/neon" title="neon "><sup>10</sup><br/>Ne</a> </td>
+		</tr>
+		<tr>
+		<td class="info">3</td>
+		<td><a discovery-year=1807 class="element alkali" href="http://en.wikipedia.org/wiki/sodium" title="sodium "><sup>11</sup><br/>Na</a> </td>
+		<td><a discovery-year=1755 class="element alkalie" href="http://en.wikipedia.org/wiki/magnesium" title="magnesium "><sup>12</sup><br/>Mg</a> </td>
+		<td><a discovery-year=1825 class="element ometals" href="http://en.wikipedia.org/wiki/aluminum" title="aluminum "><sup>13</sup><br/>Al</a> </td>
+		<td><a discovery-year=1824 class="element metalloid" href="http://en.wikipedia.org/wiki/silicon" title="silicon "><sup>14</sup><br/>Si</a> </td>
+		<td><a discovery-year=1669 class="element onm" href="http://en.wikipedia.org/wiki/phosphorus" title="phosphorus "><sup>15</sup><br/>P</a> </td>
+		<td><a discovery-year=-2000 class="element onm" href="http://en.wikipedia.org/wiki/sulfur" title="sulfur "><sup>16</sup><br/>S</a> </td>
+		<td><a discovery-year=1774 class="element halogens-gases" href="http://en.wikipedia.org/wiki/chlorine" title="chlorine "><sup>17</sup><br/>Cl</a> </td>
+		<td><a discovery-year=1894 class="element ngases" href="http://en.wikipedia.org/wiki/argon" title="argon "><sup>18</sup><br/>Ar</a> </td>
+		</tr>
+		<tr>
+		<td class="info">4</td>
+		<td><a discovery-year=1807 class="element alkali" href="http://en.wikipedia.org/wiki/potassium" title="potassium "><sup>19</sup><br/>K</a> </td>
+		<td><a discovery-year=1808 class="element alkalie" href="http://en.wikipedia.org/wiki/calcium" title="calcium "><sup>20</sup><br/>Ca</a> </td>
+		<td><a discovery-year=1879 class="element tmetals" href="http://en.wikipedia.org/wiki/scandium" title="scandium "><sup>21</sup><br/>Sc</a> </td>
+		<td><a discovery-year=1791 class="element tmetals" href="http://en.wikipedia.org/wiki/titanium" title="titanium "><sup>22</sup><br/>Ti</a> </td>
+		<td><a discovery-year=1801 class="element tmetals" href="http://en.wikipedia.org/wiki/vanadium" title="vanadium "><sup>23</sup><br/>V</a> </td>
+		<td><a discovery-year=1797 class="element tmetals" href="http://en.wikipedia.org/wiki/chromium" title="chromium "><sup>24</sup><br/>Cr</a> </td>
+		<td><a discovery-year=1774 class="element tmetals" href="http://en.wikipedia.org/wiki/manganese" title="manganese "><sup>25</sup><br/>Mn</a> </td>
+		<td><a discovery-year=-5000 class="element tmetals" href="http://en.wikipedia.org/wiki/iron" title="iron "><sup>26</sup><br/>Fe</a> </td>
+		<td><a discovery-year=1732 class="element tmetals" href="http://en.wikipedia.org/wiki/cobalt" title="cobalt "><sup>27</sup><br/>Co</a> </td>
+		<td><a discovery-year=1751 class="element tmetals" href="http://en.wikipedia.org/wiki/nickel" title="nickel "><sup>28</sup><br/>Ni</a> </td>
+		<td><a discovery-year=-9000 class="element tmetals" href="http://en.wikipedia.org/wiki/copper" title="copper "><sup>29</sup><br/>Cu</a> </td>
+		<td><a discovery-year=-1000 class="element tmetals" href="http://en.wikipedia.org/wiki/zinc" title="zinc "><sup>30</sup><br/>Zn</a> </td>
+		<td><a discovery-year=1875 class="element ometals-liquid" href="http://en.wikipedia.org/wiki/gallium" title="gallium "><sup>31</sup><br/>Ga</a> </td>
+		<td><a discovery-year=1886 class="element metalloid" href="http://en.wikipedia.org/wiki/germanium" title="germanium "><sup>32</sup><br/>Ge</a> </td>
+		<td><a discovery-year=-2500 class="element metalloid" href="http://en.wikipedia.org/wiki/arsenic" title="arsenic "><sup>33</sup><br/>As</a> </td>
+		<td><a discovery-year=1817 class="element onm" href="http://en.wikipedia.org/wiki/selenium" title="selenium "><sup>34</sup><br/>Se</a> </td>
+		<td><a discovery-year=1825 class="element halogens-liquid" href="http://en.wikipedia.org/wiki/bromine" title="bromine "><sup>35</sup><br/>Br</a> </td>
+		<td><a discovery-year=1898 class="element ngases" href="http://en.wikipedia.org/wiki/krypton" title="krypton "><sup>36</sup><br/>Kr</a> </td>
+		</tr>
+		<tr>
+		<td class="info">5</td>
+		<td><a discovery-year=1861 class="element alkali" href="http://en.wikipedia.org/wiki/rubidium" title="rubidium "><sup>37</sup><br/>Rb</a> </td>
+		<td><a discovery-year=1787 class="element alkalie" href="http://en.wikipedia.org/wiki/strontium" title="strontium "><sup>38</sup><br/>Sr</a> </td>
+		<td><a discovery-year=1794 class="element tmetals" href="http://en.wikipedia.org/wiki/yttrium" title="yttrium "><sup>39</sup><br/>Y</a> </td>
+		<td><a discovery-year=1789 class="element tmetals" href="http://en.wikipedia.org/wiki/zirconium" title="zirconium "><sup>40</sup><br/>Zr</a> </td>
+		<td><a discovery-year=1801 class="element tmetals" href="http://en.wikipedia.org/wiki/niobium" title="niobium "><sup>41</sup><br/>Nb</a> </td>
+		<td><a discovery-year=1778 class="element tmetals" href="http://en.wikipedia.org/wiki/molybdenum" title="molybdenum "><sup>42</sup><br/>Mo</a> </td>
+		<td><a discovery-year=1937 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/technetium" title="technetium "><sup>43</sup><br/>Tc</a> </td>
+		<td><a discovery-year=1844 class="element tmetals" href="http://en.wikipedia.org/wiki/ruthenium" title="ruthenium "><sup>44</sup><br/>Ru</a> </td>
+		<td><a discovery-year=1804 class="element tmetals" href="http://en.wikipedia.org/wiki/rhodium" title="rhodium "><sup>45</sup><br/>Rh</a> </td>
+		<td><a discovery-year=1803 class="element tmetals" href="http://en.wikipedia.org/wiki/palladium" title="palladium "><sup>46</sup><br/>Pd</a> </td>
+		<td><a discovery-year=-5000 class="element tmetals" href="http://en.wikipedia.org/wiki/silver" title="silver "><sup>47</sup><br/>Ag</a> </td>
+		<td><a discovery-year=1817 class="element tmetals" href="http://en.wikipedia.org/wiki/cadmium" title="cadmium "><sup>48</sup><br/>Cd</a> </td>
+		<td><a discovery-year=1863 class="element ometals" href="http://en.wikipedia.org/wiki/indium" title="indium "><sup>49</sup><br/>In</a> </td>
+		<td><a discovery-year=-3500 class="element ometals" href="http://en.wikipedia.org/wiki/tin" title="tin "><sup>50</sup><br/>Sn</a> </td>
+		<td><a discovery-year=-3000 class="element metalloid" href="http://en.wikipedia.org/wiki/antimony" title="antimony "><sup>51</sup><br/>Sb</a> </td>
+		<td><a discovery-year=1782 class="element metalloid" href="http://en.wikipedia.org/wiki/tellurium" title="tellurium "><sup>52</sup><br/>Te</a> </td>
+		<td><a discovery-year=1811 class="element halogens" href="http://en.wikipedia.org/wiki/iodine" title="iodine "><sup>53</sup><br/>I</a> </td>
+		<td><a discovery-year=1898 class="element ngases" href="http://en.wikipedia.org/wiki/xenon" title="xenon "><sup>54</sup><br/>Xe</a> </td>
+		</tr>
+		<tr>
+		<td class="info">6</td>
+		<td><a discovery-year=1860 class="element alkali-liquid" href="http://en.wikipedia.org/wiki/cesium" title="cesium "><sup>55</sup><br/>Cs</a> </td>
+		<td><a discovery-year=1772 class="element alkalie" href="http://en.wikipedia.org/wiki/barium" title="barium "><sup>56</sup><br/>Ba</a> </td>
+		<td><a discovery-year=1803 class="element actlan" href="http://www.chemicool.com/longperiodictable" title="Long Periodic Table"><sup>57-71<br/></sup></a></td>
+		<td><a discovery-year=1911 class="element tmetals" href="http://en.wikipedia.org/wiki/hafnium" title="hafnium "><sup>72</sup><br/>Hf</a> </td>
+		<td><a discovery-year=1802 class="element tmetals" href="http://en.wikipedia.org/wiki/tantalum" title="tantalum "><sup>73</sup><br/>Ta</a> </td>
+		<td><a discovery-year=1781 class="element tmetals" href="http://en.wikipedia.org/wiki/tungsten" title="tungsten "><sup>74</sup><br/>W</a> </td>
+		<td><a discovery-year=1908 class="element tmetals" href="http://en.wikipedia.org/wiki/rhenium" title="rhenium "><sup>75</sup><br/>Re</a> </td>
+		<td><a discovery-year=1803 class="element tmetals" href="http://en.wikipedia.org/wiki/osmium" title="osmium "><sup>76</sup><br/>Os</a> </td>
+		<td><a discovery-year=1803 class="element tmetals" href="http://en.wikipedia.org/wiki/iridium" title="iridium "><sup>77</sup><br/>Ir</a> </td>
+		<td><a discovery-year=1735 class="element tmetals" href="http://en.wikipedia.org/wiki/platinum" title="platinum "><sup>78</sup><br/>Pt</a> </td>
+		<td><a discovery-year=-6000 class="element tmetals" href="http://en.wikipedia.org/wiki/gold" title="gold "><sup>79</sup><br/>Au</a> </td>
+		<td><a discovery-year=-2000 class="element tmetals-liquid" href="http://en.wikipedia.org/wiki/mercury" title="mercury "><sup>80</sup><br/>Hg</a> </td>
+		<td><a discovery-year=1861 class="element ometals" href="http://en.wikipedia.org/wiki/thallium" title="thallium "><sup>81</sup><br/>Tl</a> </td>
+		<td><a discovery-year=-7000 class="element ometals" href="http://en.wikipedia.org/wiki/lead" title="lead "><sup>82</sup><br/>Pb</a> </td>
+		<td><a discovery-year=1753 class="element ometals" href="http://en.wikipedia.org/wiki/bismuth" title="bismuth "><sup>83</sup><br/>Bi</a> </td>
+		<td><a discovery-year=1898 class="element metalloid" href="http://en.wikipedia.org/wiki/polonium" title="polonium "><sup>84</sup><br/>Po</a> </td>
+		<td><a discovery-year=1940 class="element halogens" href="http://en.wikipedia.org/wiki/astatine" title="astatine "><sup>85</sup><br/>At</a> </td>
+		<td><a discovery-year=1898 class="element ngases" href="http://en.wikipedia.org/wiki/radon" title="radon "><sup>86</sup><br/>Rn</a> </td>
+		</tr>
+		<tr>
+		<td class="info">7</td>
+		<td><a discovery-year=1939 class="element alkali-liquid" href="http://en.wikipedia.org/wiki/francium" title="francium "><sup>87</sup><br/>Fr</a> </td>
+		<td><a discovery-year=1898 class="element alkalie" href="http://en.wikipedia.org/wiki/radium" title="radium "><sup>88</sup><br/>Ra</a> </td>
+		<td><a discovery-year=1789 class="element actlan" href="http://www.chemicool.com/longperiodictable" title="Long Periodic Table"><sup>89-103<br/></sup></a></td>
+		<td><a discovery-year=1968 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/rutherfordium" title="rutherfordium "><sup>104</sup><br/>Rf</a> </td>
+		<td><a discovery-year=1970 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/dubnium" title="dubnium "><sup>105</sup><br/>Db</a> </td>
+		<td><a discovery-year=1974 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/seaborgium" title="seaborgium "><sup>106</sup><br/>Sg</a> </td>
+		<td><a discovery-year=1981 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/bohrium" title="bohrium "><sup>107</sup><br/>Bh</a> </td>
+		<td><a discovery-year=1984 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/hassium" title="hassium "><sup>108</sup><br/>Hs</a> </td>
+		<td><a discovery-year=1982 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/meitnerium" title="meitnerium "><sup>109</sup><br/>Mt</a> </td>
+		<td><a discovery-year=1994 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/darmstadtium" title="darmstadtium "><sup>110</sup><br/>Ds</a> </td>
+		<td><a discovery-year=1994 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/roentgenium" title="roentgenium "><sup>111</sup><br/>Rg</a> </td>
+		<td><a discovery-year=1996 class="element tmetals-synthetic" href="http://en.wikipedia.org/wiki/copernicium" title="copernicium "><sup>112</sup><br/>Cn</a> </td>
+		<td><a discovery-year=2003 class="element unnamed" href="http://en.wikipedia.org/wiki/ununtrium" title="ununtrium"><sup>113</sup><br/>Uut</a> </td>
+		<td><a discovery-year=1999 class="element unnamed" href="http://en.wikipedia.org/wiki/flerovium" title="flerovium"><sup>114</sup><br/>Fl</a> </td>
+		<td><a discovery-year=2003 class="element unnamed" href="http://en.wikipedia.org/wiki/ununpentium" title="ununpentium"><sup>115</sup><br/>Uup</a> </td>
+		<td><a discovery-year=2000 class="element unnamed" href="http://en.wikipedia.org/wiki/livermorium" title="livermorium"><sup>116</sup><br/>Lv</a> </td>
+		<td><a discovery-year=2010 class="element unnamed" href="http://en.wikipedia.org/wiki/ununseptium" title="ununseptium"><sup>117</sup><br/>Uus</a> </td>
+		<td><a discovery-year=2002 class="element unnamed" href="http://en.wikipedia.org/wiki/ununoctium" title="ununoctium"><sup>118</sup><br/>Uuo</a> </td>
+		</tr>
+		<tr>
+		<td colspan="4">&nbsp;</td>
+		<td colspan="15">&nbsp;</td>
+		</tr>
+		<tr>
+		<td colspan="3"></td>
+		<td><a discovery-year=1838 class="element rare" href="http://en.wikipedia.org/wiki/lanthanum" title="lanthanum "><sup>57</sup><br/>La</a> </td>
+		<td><a discovery-year=1803 class="element rare" href="http://en.wikipedia.org/wiki/cerium" title="cerium "><sup>58</sup><br/>Ce</a> </td>
+		<td><a discovery-year=1885 class="element rare" href="http://en.wikipedia.org/wiki/praseodymium" title="praseodymium "><sup>59</sup><br/>Pr</a> </td>
+		<td><a discovery-year=1885 class="element rare" href="http://en.wikipedia.org/wiki/neodymium" title="neodymium "><sup>60</sup><br/>Nd</a> </td>
+		<td><a discovery-year=1942 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/promethium" title="promethium "><sup>61</sup><br/>Pm</a> </td>
+		<td><a discovery-year=1879 class="element rare" href="http://en.wikipedia.org/wiki/samarium" title="samarium "><sup>62</sup><br/>Sm</a> </td>
+		<td><a discovery-year=1896 class="element rare" href="http://en.wikipedia.org/wiki/europium" title="europium "><sup>63</sup><br/>Eu</a> </td>
+		<td><a discovery-year=1880 class="element rare" href="http://en.wikipedia.org/wiki/gadolinium" title="gadolinium "><sup>64</sup><br/>Gd</a> </td>
+		<td><a discovery-year=1842 class="element rare" href="http://en.wikipedia.org/wiki/terbium" title="terbium "><sup>65</sup><br/>Tb</a> </td>
+		<td><a discovery-year=1886 class="element rare" href=" http://en.wikipedia.org/wiki/dysprosium  " title="dysprosium "><sup>66</sup><br/>Dy</a> </td>
+		<td><a discovery-year=1878 class="element rare" href="http://en.wikipedia.org/wiki/holmium   " title="holmium "><sup>67</sup><br/>Ho</a> </td>
+		<td><a discovery-year=1842 class="element rare" href="http://en.wikipedia.org/wiki/erbium   " title="erbium "><sup>68</sup><br/>Er</a> </td>
+		<td><a discovery-year=1879 class="element rare" href=" http://en.wikipedia.org/wiki/thulium  " title="thulium "><sup>69</sup><br/>Tm</a> </td>
+		<td><a discovery-year=1878 class="element rare" href="http://en.wikipedia.org/wiki/ytterbium   " title="ytterbium "><sup>70</sup><br/>Yb</a> </td>
+		<td><a discovery-year=1906 class="element rare" href="http://en.wikipedia.org/wiki/lutetium   " title="lutetium "><sup>71</sup><br/>Lu</a> </td>
+		<td colspan="1"></td>
+		</tr>
+		<tr>
+		<td colspan="3"></td>
+		<td><a discovery-year=1899 class="element rare" href="http://en.wikipedia.org/wiki/actinium   " title="actinium "><sup>89</sup><br/>Ac</a> </td>
+		<td><a discovery-year=1829 class="element rare" href="http://en.wikipedia.org/wiki/thorium   " title="thorium "><sup>90</sup><br/>Th</a> </td>
+		<td><a discovery-year=1913 class="element rare" href="http://en.wikipedia.org/wiki/protactinium   " title="protactinium "><sup>91</sup><br/>Pa</a> </td>
+		<td><a discovery-year=1789 class="element rare" href="http://en.wikipedia.org/wiki/uranium   " title="uranium "><sup>92</sup><br/>U</a> </td>
+		<td><a discovery-year=1940 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/neptunium   " title="neptunium "><sup>93</sup><br/>Np</a> </td>
+		<td><a discovery-year=1940 class="element rare-synthetic" href=" http://en.wikipedia.org/wiki/plutonium  " title="plutonium "><sup>94</sup><br/>Pu</a> </td>
+		<td><a discovery-year=1944 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/americium   " title="americium "><sup>95</sup><br/>Am</a> </td>
+		<td><a discovery-year=1944 class="element rare-synthetic" href=" http://en.wikipedia.org/wiki/curium  " title="curium "><sup>96</sup><br/>Cm</a> </td>
+		<td><a discovery-year=1949 class="element rare-synthetic" href=" http://en.wikipedia.org/wiki/berkelium  " title="berkelium "><sup>97</sup><br/>Bk</a> </td>
+		<td><a discovery-year=1950 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/californium   " title="californium "><sup>98</sup><br/>Cf</a> </td>
+		<td><a discovery-year=1952 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/einsteinium   " title="einsteinium "><sup>99</sup><br/>Es</a> </td>
+		<td><a discovery-year=1952 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/fermium   " title="fermium "><sup>100</sup><br/>Fm</a> </td>
+		<td><a discovery-year=1955 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/mendelevium   " title="mendelevium "><sup>101</sup><br/>Md</a> </td>
+		<td><a discovery-year=1958 class="element rare-synthetic" href=" http://en.wikipedia.org/wiki/nobelium  " title="nobelium "><sup>102</sup><br/>No</a> </td>
+		<td><a discovery-year=1961 class="element rare-synthetic" href="http://en.wikipedia.org/wiki/lawrencium   " title="lawrencium "><sup>103</sup><br/>Lr</a> </td>
+		<td colspan="1"></td>
+		</tr>
+		</table>
+		<br/>
+		<h2>Periodic Table Key</h2>
+		<table border="1" cellpadding="0" cellspacing="0" class="navbar">
+		<tr>
+		<td><div class="synthetic">X<br/><sub>Synthetic Elements</sub></div></td>
+		<td><div class="liquid ">X<br/><sub>Liquids or melt at close to room temp.</sub></div></td>
+		<td><div class="solid ">X<br/><sub>Solids</sub></div></td>
+		<td><div class="gas ">X<br/><sub>Gases</sub></div></td>
+		<td><div class="alkali"><sup>Alkali Metals</sup></div> </td>
+		<td><div class="alkalie"><sup>Alkali Earth Metals</sup></div> </td>
+		<td><div class="tmetals "><sup>Transition Metals</sup></div> </td>
+		<td><div class="ometals"><sup>Other Metals</sup></div> </td>
+		<td><div class="metalloid"><sup>Metalloids</sup></div> </td>
+		<td><div class="onm"><sup>Other Non Metals</sup></div> </td>
+		<td><div class="halogens"><sup>Halogens</sup></div> </td>
+		<td><div class="ngases "><sup>Noble Gases</sup></div> </td>
+		<td><div class="rare "><sup>Lanthanides <br/>&amp; Actinides</sup></div> </td>
+		</tr>
+	</table>
+
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+
+	var yearArray = []
+	var timeRange = $('#time-range')
+	var yearTimer = null
+	var timerOn = false
+
+	$("#year").html('-9000')
+
+	// console.log(timeRange)
+
+	timeRange.on('input', function(event) {
+		var year = +event.target.value
+		pause()
+		showElement(year)
+		updateYear(year)
+	})
+
+	timeRange.on('mouseup', function(event) {
+		if(timerOn == true) {
+				start()
+		};
+	})
+
+	function showElement(year) {
+		var elements = $('td a[discovery-year]').each(function(i,cell) {
+			var discoveryYear = $(this).attr('discovery-year');
+			$(this).toggleClass('hidden',year > discoveryYear);
+		})
+	}
+
+	function updateYear(year) {
+		updateStep(year);
+		$('#time-range').val(year);
+		$("#year").html(year);
+	}
+
+	function updateStep(year) {
+		if(year >= 1600) {
+			$('#time-range').attr('step','1')
+		}
+		if(year < 1600) {
+			$('#time-range').attr('step','100')
+		}
+	}
+
+	function start() {
+		timerOn = true
+		year = $('#time-range').val();
+	  yearTimer = setInterval(function(){
+			if (year >= 1600) {
+				speed = 1
+			}
+			if (year < 1600) {
+				speed = 100
+			}
+			if (year >= 2015) {
+				pause()
+			}
+			year = parseInt(year) + speed;
+			updateYear(year);
+			showElement(year);
+		}, 100);
+	};
+
+	function pause() {
+	    clearInterval(yearTimer);
+			pauseOffsetStart = new Date;
+			updateYear(year);
+	}
+
+	function reset() {
+			clearInterval(yearTimer);
+			timerOn = false
+			year = $('#time-range').attr('min')
+			updateYear(year);
+			showElement(year);
+	}
+
+
+	</script>
+</body>
