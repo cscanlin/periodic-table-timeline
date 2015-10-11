@@ -1,1 +1,1 @@
-# peridic-table-timeline
+# peridoic-table-timeline
