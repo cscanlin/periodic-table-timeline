@@ -60,6 +60,14 @@ class PeriodicTable extends Component {
     return <ChemicalElement {...element} shouldShow={shouldShow}/>
   }
 
+  showSingleRow() {
+    return this.state.activeYear >= 1803
+  }
+
+  showDoubleRow() {
+    return this.state.activeYear >= 1789
+  }
+
   render() {
     return (
       <div className="app">
@@ -147,7 +155,11 @@ class PeriodicTable extends Component {
               <td>{this.displayElement("caesium")}</td>
               <td>{this.displayElement("barium")}</td>
               <td className="center asterisk">
-                <img alt='asterisk' src={SINGLE_ASTERISK}/>
+                <img
+                  style={{display: this.showSingleRow() ? 'inline': 'none'}}
+                  alt='asterisk'
+                  src={SINGLE_ASTERISK}
+                />
               </td>
               <td>{this.displayElement("lutetium")}</td>
               <td>{this.displayElement("hafnium")}</td>
@@ -170,7 +182,11 @@ class PeriodicTable extends Component {
               <td>{this.displayElement("francium")}</td>
               <td>{this.displayElement("radium")}</td>
               <td className="center asterisk">
-                <img alt='double asterisk' src={DOUBLE_ASTERISK}/>
+                <img
+                  style={{display: this.showDoubleRow() ? 'inline': 'none'}}
+                  alt='double asterisk'
+                  src={DOUBLE_ASTERISK}
+                />
               </td>
               <td>{this.displayElement("lawrencium")}</td>
               <td>{this.displayElement("rutherfordium")}</td>
@@ -196,7 +212,11 @@ class PeriodicTable extends Component {
               <td></td>
               <td></td>
               <td className="center asterisk">
-                <img alt='asterisk' src={SINGLE_ASTERISK}/>
+                <img
+                  style={{display: this.showSingleRow() ? 'inline': 'none'}}
+                  alt='asterisk'
+                  src={SINGLE_ASTERISK}
+                />
               </td>
               <td>{this.displayElement("lanthanum")}</td>
               <td>{this.displayElement("cerium")}</td>
@@ -217,7 +237,11 @@ class PeriodicTable extends Component {
               <td></td>
               <td></td>
               <td className="center asterisk">
-                <img alt='double asterisk' src={DOUBLE_ASTERISK}/>
+                <img
+                  style={{display: this.showDoubleRow() ? 'inline': 'none'}}
+                  alt='double asterisk'
+                  src={DOUBLE_ASTERISK}
+                />
               </td>
               <td>{this.displayElement("actinium")}</td>
               <td>{this.displayElement("thorium")}</td>

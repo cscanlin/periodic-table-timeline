@@ -117,6 +117,7 @@
 .category,
 .subcategory {
   padding:0 1px;
+  height: 20px;
 }
 
 .metal,
@@ -167,15 +168,3 @@
 .noble-gas {
   background:#c0ffff;
 }
-
-
-/*Metalloid
-Alkali_metal
-Alkaline_earth_metal
-Lanthanide
-Actinide
-Transition_metal
-Post-transition_metal
-Polyatomic_nonmetal
-Diatomic_nonmetal
-Noble_gas*/
