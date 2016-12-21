@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
+
 import ElementGrid from './ElementGrid'
 import Legend from './Legend'
 import Controls from './Controls'
 
-const YEAR = new Date().getFullYear()
+const START_YEAR = 1700
+const CURRENT_YEAR = new Date().getFullYear()
 
 class PeriodicTable extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeYear: 1700,
+      activeYear: START_YEAR,
       timer: null,
       speed: 12,
     }
@@ -21,11 +23,18 @@ class PeriodicTable extends Component {
     this.decreaseSpeed = this.decreaseSpeed.bind(this)
   }
 
+  onKeyPress(e) {
+    console.log(e);
+  }
+
   sortElements(key = "discoveryYear") {
     return Object.values(this.props.elementData).sort((a, b) => a[key] - b[key])
   }
 
   play() {
+    if (this.state.activeYear === CURRENT_YEAR) {
+      this.state.activeYear = START_YEAR
+    }
     if (!this.state.timer) {
       this.setState({timer: setInterval(this.incrementYear, 100)})
     }
@@ -39,14 +48,15 @@ class PeriodicTable extends Component {
   increaseSpeed() {
     this.setState({speed: this.state.speed < 96 ? this.state.speed * 2 : this.state.speed})
   }
+
   decreaseSpeed() {
     this.setState({speed: this.state.speed > 1 ? this.state.speed / 2 : this.state.speed})
   }
 
   incrementYear() {
-    const nextYear = Math.min(YEAR, this.state.activeYear + (this.state.speed/10))
+    const nextYear = Math.min(CURRENT_YEAR, this.state.activeYear + (this.state.speed/10))
     this.setState({activeYear: nextYear})
-    if (this.state.activeYear >= YEAR) {
+    if (this.state.activeYear >= CURRENT_YEAR) {
       this.pause()
     }
   }

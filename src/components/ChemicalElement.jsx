@@ -5,6 +5,11 @@ class ChemicalElement extends Component {
     return this.props.shouldShow !== nextProps.shouldShow
   }
 
+  discoveryYearFormatted() {
+    const discovered = this.props.discoveryYear
+    return discovered < 0 ? `~${Math.abs(discovered)} BCE` : discovered
+  }
+
   render() {
     const elementStyle = {display: this.props.shouldShow ? 'block' : 'none'}
     return (
@@ -14,6 +19,7 @@ class ChemicalElement extends Component {
             <span className="element-name-text" dangerouslySetInnerHTML={{__html: this.props.nameText}} />
             <span className={`atomic-number ${this.props.matterState}`}>{this.props.atomicNumber}</span>
             <span className="atomic-symbol">{this.props.atomicSymbol}</span>
+            <span className="discovery-year nowrap">{this.discoveryYearFormatted()}</span>
           </span>
         </a>
       </span>
