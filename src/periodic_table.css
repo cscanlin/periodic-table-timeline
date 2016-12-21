@@ -23,6 +23,10 @@
   table-layout:fixed;
 }
 
+.row {
+  height: 72px;
+}
+
 .element-name-text {
   display: block;
   color: black;
@@ -39,6 +43,11 @@
   padding: 0 0 2px 0;
   text-align: center;
   vertical-align: bottom;
+}
+
+.asterisk {
+  width: 106;
+  height: 98;
 }
 
 .legend-table {
@@ -63,6 +72,11 @@
 .legend {
   background: #e0e0e0;
   width: 12%;
+}
+
+.atomic-symbol,
+.atomic-number {
+  display: block;
 }
 
 .matter-state {

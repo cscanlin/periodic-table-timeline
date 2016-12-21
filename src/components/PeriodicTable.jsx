@@ -3,190 +3,238 @@ import ChemicalElement from './ChemicalElement'
 import Legend from './Legend'
 import Controls from './Controls'
 
+const SINGLE_ASTERISK = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Asterisks_one.svg/16px-Asterisks_one.svg.png'
+const DOUBLE_ASTERISK = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Asterisks_2_%28vertical%29.svg/16px-Asterisks_2_%28vertical%29.svg.png'
+
+const YEAR = new Date().getFullYear()
+
 class PeriodicTable extends Component {
   constructor(props) {
     super(props)
     this.state = {
       activeYear: 1700,
+      timer: null,
+      speed: 12,
     }
-    this.updateYear = this.updateYear.bind(this)
+    this.play = this.play.bind(this)
+    this.pause = this.pause.bind(this)
+    this.incrementYear = this.incrementYear.bind(this)
+    this.onSlide = this.onSlide.bind(this)
+    this.increaseSpeed = this.increaseSpeed.bind(this)
+    this.decreaseSpeed = this.decreaseSpeed.bind(this)
   }
 
-  updateYear(event) {
+  play() {
+    if (!this.state.timer) {
+      this.setState({timer: setInterval(this.incrementYear, 100)})
+    }
+  }
+
+  pause() {
+    clearInterval(this.state.timer)
+    this.setState({timer: null})
+  }
+
+  increaseSpeed() {
+    this.setState({speed: this.state.speed < 96 ? this.state.speed * 2 : this.state.speed})
+  }
+  decreaseSpeed() {
+    this.setState({speed: this.state.speed > 1 ? this.state.speed / 2 : this.state.speed})
+  }
+
+  incrementYear() {
+    const nextYear = Math.min(YEAR, this.state.activeYear + (this.state.speed/10))
+    this.setState({activeYear: nextYear})
+    if (this.state.activeYear >= YEAR) {
+      this.pause()
+    }
+  }
+
+  onSlide(event) {
     this.setState({activeYear: parseInt(event.target.value)});
+  }
+
+  displayElement(elementName) {
+    const element = this.props.elementData[elementName]
+    const shouldShow = element.discoveryYear <= this.state.activeYear
+    return <ChemicalElement {...element} shouldShow={shouldShow}/>
   }
 
   render() {
     return (
       <div className="app">
-        <Controls activeYear={this.state.activeYear} updateYear={this.updateYear}/>
+        <Controls
+          activeYear={this.state.activeYear}
+          onSlide={this.onSlide}
+          play={this.play}
+          pause={this.pause}
+          isPlaying={this.state.timer !== null}
+          increaseSpeed={this.increaseSpeed}
+          decreaseSpeed={this.decreaseSpeed}
+          />
         <table className="table">
           <tbody>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["hydrogen"]} {...this.state}/></td>
+            <tr className="row">
+              <td>{this.displayElement("hydrogen")}</td>
               <td colSpan="17"></td>
-              <td><ChemicalElement {...this.props.elementData["helium"]} {...this.state}/></td>
+              <td>{this.displayElement("helium")}</td>
             </tr>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["lithium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["beryllium"]} {...this.state}/></td>
+            <tr className="row">
+              <td>{this.displayElement("lithium")}</td>
+              <td>{this.displayElement("beryllium")}</td>
               <td colSpan="11"></td>
-              <td><ChemicalElement {...this.props.elementData["boron"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["carbon"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["nitrogen"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["oxygen"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["fluorine"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["neon"]} {...this.state}/></td>
+              <td>{this.displayElement("boron")}</td>
+              <td>{this.displayElement("carbon")}</td>
+              <td>{this.displayElement("nitrogen")}</td>
+              <td>{this.displayElement("oxygen")}</td>
+              <td>{this.displayElement("fluorine")}</td>
+              <td>{this.displayElement("neon")}</td>
             </tr>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["sodium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["magnesium"]} {...this.state}/></td>
+            <tr className="row">
+              <td>{this.displayElement("sodium")}</td>
+              <td>{this.displayElement("magnesium")}</td>
               <td colSpan="11"></td>
-              <td><ChemicalElement {...this.props.elementData["aluminium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["silicon"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["phosphorus"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["sulfur"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["chlorine"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["argon"]} {...this.state}/></td>
+              <td>{this.displayElement("aluminium")}</td>
+              <td>{this.displayElement("silicon")}</td>
+              <td>{this.displayElement("phosphorus")}</td>
+              <td>{this.displayElement("sulfur")}</td>
+              <td>{this.displayElement("chlorine")}</td>
+              <td>{this.displayElement("argon")}</td>
             </tr>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["potassium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["calcium"]} {...this.state}/></td>
+            <tr className="row">
+              <td>{this.displayElement("potassium")}</td>
+              <td>{this.displayElement("calcium")}</td>
               <td></td>
-              <td><ChemicalElement {...this.props.elementData["scandium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["titanium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["vanadium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["chromium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["manganese"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["iron"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["cobalt"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["nickel"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["copper"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["zinc"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["gallium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["germanium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["arsenic"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["selenium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["bromine"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["krypton"]} {...this.state}/></td>
+              <td>{this.displayElement("scandium")}</td>
+              <td>{this.displayElement("titanium")}</td>
+              <td>{this.displayElement("vanadium")}</td>
+              <td>{this.displayElement("chromium")}</td>
+              <td>{this.displayElement("manganese")}</td>
+              <td>{this.displayElement("iron")}</td>
+              <td>{this.displayElement("cobalt")}</td>
+              <td>{this.displayElement("nickel")}</td>
+              <td>{this.displayElement("copper")}</td>
+              <td>{this.displayElement("zinc")}</td>
+              <td>{this.displayElement("gallium")}</td>
+              <td>{this.displayElement("germanium")}</td>
+              <td>{this.displayElement("arsenic")}</td>
+              <td>{this.displayElement("selenium")}</td>
+              <td>{this.displayElement("bromine")}</td>
+              <td>{this.displayElement("krypton")}</td>
             </tr>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["rubidium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["strontium"]} {...this.state}/></td>
+            <tr className="row">
+              <td>{this.displayElement("rubidium")}</td>
+              <td>{this.displayElement("strontium")}</td>
               <td></td>
-              <td><ChemicalElement {...this.props.elementData["yttrium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["zirconium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["niobium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["molybdenum"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["technetium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["ruthenium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["rhodium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["palladium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["silver"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["cadmium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["indium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["tin"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["antimony"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["tellurium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["iodine"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["xenon"]} {...this.state}/></td>
+              <td>{this.displayElement("yttrium")}</td>
+              <td>{this.displayElement("zirconium")}</td>
+              <td>{this.displayElement("niobium")}</td>
+              <td>{this.displayElement("molybdenum")}</td>
+              <td>{this.displayElement("technetium")}</td>
+              <td>{this.displayElement("ruthenium")}</td>
+              <td>{this.displayElement("rhodium")}</td>
+              <td>{this.displayElement("palladium")}</td>
+              <td>{this.displayElement("silver")}</td>
+              <td>{this.displayElement("cadmium")}</td>
+              <td>{this.displayElement("indium")}</td>
+              <td>{this.displayElement("tin")}</td>
+              <td>{this.displayElement("antimony")}</td>
+              <td>{this.displayElement("tellurium")}</td>
+              <td>{this.displayElement("iodine")}</td>
+              <td>{this.displayElement("xenon")}</td>
             </tr>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["caesium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["barium"]} {...this.state}/></td>
-              <td className="center" style={{width: 106, height: 98}}>
-                <img alt='asterisk' src={'//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Asterisks_one.svg/16px-Asterisks_one.svg.png'}/>
+            <tr className="row">
+              <td>{this.displayElement("caesium")}</td>
+              <td>{this.displayElement("barium")}</td>
+              <td className="center asterisk">
+                <img alt='asterisk' src={SINGLE_ASTERISK}/>
               </td>
-              <td><ChemicalElement {...this.props.elementData["lutetium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["hafnium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["tantalum"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["tungsten"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["rhenium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["osmium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["iridium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["platinum"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["gold"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["mercury"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["thallium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["lead"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["bismuth"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["polonium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["astatine"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["radon"]} {...this.state}/></td>
+              <td>{this.displayElement("lutetium")}</td>
+              <td>{this.displayElement("hafnium")}</td>
+              <td>{this.displayElement("tantalum")}</td>
+              <td>{this.displayElement("tungsten")}</td>
+              <td>{this.displayElement("rhenium")}</td>
+              <td>{this.displayElement("osmium")}</td>
+              <td>{this.displayElement("iridium")}</td>
+              <td>{this.displayElement("platinum")}</td>
+              <td>{this.displayElement("gold")}</td>
+              <td>{this.displayElement("mercury")}</td>
+              <td>{this.displayElement("thallium")}</td>
+              <td>{this.displayElement("lead")}</td>
+              <td>{this.displayElement("bismuth")}</td>
+              <td>{this.displayElement("polonium")}</td>
+              <td>{this.displayElement("astatine")}</td>
+              <td>{this.displayElement("radon")}</td>
             </tr>
-            <tr>
-              <td><ChemicalElement {...this.props.elementData["francium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["radium"]} {...this.state}/></td>
-              <td className="center" style={{width: 106, height: 98}}>
-                <img alt='double asterisk' src={'//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Asterisks_2_%28vertical%29.svg/16px-Asterisks_2_%28vertical%29.svg.png'}/>
+            <tr className="row">
+              <td>{this.displayElement("francium")}</td>
+              <td>{this.displayElement("radium")}</td>
+              <td className="center asterisk">
+                <img alt='double asterisk' src={DOUBLE_ASTERISK}/>
               </td>
-              <td><ChemicalElement {...this.props.elementData["lawrencium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["rutherfordium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["dubnium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["seaborgium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["bohrium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["hassium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["meitnerium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["darmstadtium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["roentgenium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["copernicium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["nihonium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["flerovium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["moscovium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["livermorium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["tennessine"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["oganesson"]} {...this.state}/></td>
+              <td>{this.displayElement("lawrencium")}</td>
+              <td>{this.displayElement("rutherfordium")}</td>
+              <td>{this.displayElement("dubnium")}</td>
+              <td>{this.displayElement("seaborgium")}</td>
+              <td>{this.displayElement("bohrium")}</td>
+              <td>{this.displayElement("hassium")}</td>
+              <td>{this.displayElement("meitnerium")}</td>
+              <td>{this.displayElement("darmstadtium")}</td>
+              <td>{this.displayElement("roentgenium")}</td>
+              <td>{this.displayElement("copernicium")}</td>
+              <td>{this.displayElement("nihonium")}</td>
+              <td>{this.displayElement("flerovium")}</td>
+              <td>{this.displayElement("moscovium")}</td>
+              <td>{this.displayElement("livermorium")}</td>
+              <td>{this.displayElement("tennessine")}</td>
+              <td>{this.displayElement("oganesson")}</td>
             </tr>
-            <tr>
+            <tr className="row">
               <td colSpan="19" style={{height: '1.4em'}}></td>
             </tr>
-            <tr>
+            <tr className="row">
               <td></td>
               <td></td>
-              <td></td>
-              <td className="center" style={{width: 106, height: 98}}>
-                <img alt='asterisk' src={'//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Asterisks_one.svg/16px-Asterisks_one.svg.png'}/>
+              <td className="center asterisk">
+                <img alt='asterisk' src={SINGLE_ASTERISK}/>
               </td>
-              <td><ChemicalElement {...this.props.elementData["lanthanum"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["cerium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["praseodymium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["neodymium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["promethium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["samarium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["europium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["gadolinium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["terbium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["dysprosium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["holmium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["erbium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["thulium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["ytterbium"]} {...this.state}/></td>
-              <td>&nbsp;</td>
+              <td>{this.displayElement("lanthanum")}</td>
+              <td>{this.displayElement("cerium")}</td>
+              <td>{this.displayElement("praseodymium")}</td>
+              <td>{this.displayElement("neodymium")}</td>
+              <td>{this.displayElement("promethium")}</td>
+              <td>{this.displayElement("samarium")}</td>
+              <td>{this.displayElement("europium")}</td>
+              <td>{this.displayElement("gadolinium")}</td>
+              <td>{this.displayElement("terbium")}</td>
+              <td>{this.displayElement("dysprosium")}</td>
+              <td>{this.displayElement("holmium")}</td>
+              <td>{this.displayElement("erbium")}</td>
+              <td>{this.displayElement("thulium")}</td>
+              <td>{this.displayElement("ytterbium")}</td>
             </tr>
-            <tr>
+            <tr className="row">
               <td></td>
               <td></td>
-              <td></td>
-              <td className="center" style={{width: 106, height: 98}}>
-                <img alt='double asterisk' src={'//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Asterisks_2_%28vertical%29.svg/16px-Asterisks_2_%28vertical%29.svg.png'}/>
+              <td className="center asterisk">
+                <img alt='double asterisk' src={DOUBLE_ASTERISK}/>
               </td>
-              <td><ChemicalElement {...this.props.elementData["actinium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["thorium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["protactinium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["uranium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["neptunium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["plutonium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["americium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["curium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["berkelium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["californium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["einsteinium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["fermium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["mendelevium"]} {...this.state}/></td>
-              <td><ChemicalElement {...this.props.elementData["nobelium"]} {...this.state}/></td>
-              <td>&nbsp;</td>
+              <td>{this.displayElement("actinium")}</td>
+              <td>{this.displayElement("thorium")}</td>
+              <td>{this.displayElement("protactinium")}</td>
+              <td>{this.displayElement("uranium")}</td>
+              <td>{this.displayElement("neptunium")}</td>
+              <td>{this.displayElement("plutonium")}</td>
+              <td>{this.displayElement("americium")}</td>
+              <td>{this.displayElement("curium")}</td>
+              <td>{this.displayElement("berkelium")}</td>
+              <td>{this.displayElement("californium")}</td>
+              <td>{this.displayElement("einsteinium")}</td>
+              <td>{this.displayElement("fermium")}</td>
+              <td>{this.displayElement("mendelevium")}</td>
+              <td>{this.displayElement("nobelium")}</td>
             </tr>
-            <tr>
+            <tr className="row">
               <td colSpan="19" style={{fontSize: '90%'}}>
                 <Legend/>
               </td>
