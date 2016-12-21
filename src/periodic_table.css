@@ -4,7 +4,11 @@
 }
 
 .nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
+}
+
+.fit {
+  width: 100%;
 }
 
 .table {
@@ -37,6 +41,25 @@
   vertical-align: bottom;
 }
 
+.legend-table {
+  width:100%;
+  line-height:120%;
+  text-align:center;
+  vertical-align:top;
+  font-size:85%;
+  background:#f8f8f8;
+  margin:0;
+  border: 1px solid #a2a9b1;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.legend-description {
+  width:1em;
+  text-align:left;
+  padding-right:0.5em;
+}
+
 .legend {
   background: #e0e0e0;
   width: 12%;
@@ -60,6 +83,8 @@
 }
 
 .occurrence {
+  width:12%;
+  background:#e0e0e0;
 }
 
 .primordial {
@@ -78,6 +103,11 @@
 .category,
 .subcategory {
   padding:0 1px;
+}
+
+.metal,
+.nonmetal {
+  background:#e0e0e0
 }
 
 .metalloid {

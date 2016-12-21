@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ChemicalElement from './ChemicalElement'
+import Legend from './Legend'
 
 class PeriodicTable extends Component {
   constructor(props) {
@@ -177,12 +178,9 @@ class PeriodicTable extends Component {
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td colSpan="19" style={{fontSize: '90%'}}></td>
-          </tr>
-          <tr>
-          <td colSpan="19">
-
-          </td>
+            <td colSpan="19" style={{fontSize: '90%'}}>
+              <Legend/>
+            </td>
           </tr>
         </tbody>
       </table>
