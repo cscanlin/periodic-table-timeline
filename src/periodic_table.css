@@ -1,0 +1,137 @@
+.center {
+  text-align:center;
+  vertical-align:middle;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.table {
+  border-spacing:1px;
+  background:#f8f8f8;
+  border:1px solid #a9a9a9;
+  width:100%;
+  max-width:1800px;
+  margin:0 auto;
+  padding:2px;
+  vertical-align:top;
+  table-layout:fixed;
+}
+
+.element-name-text {
+  display: block;
+  color: black;
+  font-size: 85%;
+  height: 2.2em;
+  line-height: 1.1em;
+  vertical-align: top;
+}
+
+.element {
+  display: block;
+  line-height: 1.1em;
+  overflow: hidden;
+  padding: 0 0 2px 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.legend {
+  background: #e0e0e0;
+  width: 12%;
+}
+
+.matter-state {
+  padding: 0 0.5em;
+}
+
+.solid {
+  color:#000000;
+}
+.liquid {
+  color:#008000;
+}
+.gas {
+  color:#ff0000;
+}
+.unknown-matter-state {
+  color: #696969;
+}
+
+.occurrence {
+}
+
+.primordial {
+  border-top:2px solid #8811ff;
+  border-bottom:2px solid #8811ff;
+}
+.from-decay {
+  border-top:2px dashed #773300;
+  border-bottom:2px dashed #773300;
+}
+.synthetic {
+  border-top:2px dotted #4499ff;
+  border-bottom:2px dotted #4499ff;
+}
+
+.category,
+.subcategory {
+  padding:0 1px;
+}
+
+.metalloid {
+  background:#cccc99;
+}
+
+.alkali-metal {
+  background:#ff6666;
+}
+
+.alkaline-earth-metal {
+  background:#ffdead;
+}
+
+.lanthanide {
+  background:#ffbfff;
+}
+
+.actinide {
+  background:#ff99cc;
+}
+
+.transition-metal {
+  background:#ffc0c0;
+}
+
+.post-transition-metal {
+  background:#cccccc;
+}
+
+.polyatomic-nonmetal {
+  background:#a1ffc3;
+}
+
+.diatomic-nonmetal {
+  background:#e7ff8f;
+}
+
+.unknown-subcategory {
+  background: #e8e8e8;
+}
+
+.noble-gas {
+  background:#c0ffff;
+}
+
+
+/*Metalloid
+Alkali_metal
+Alkaline_earth_metal
+Lanthanide
+Actinide
+Transition_metal
+Post-transition_metal
+Polyatomic_nonmetal
+Diatomic_nonmetal
+Noble_gas*/
