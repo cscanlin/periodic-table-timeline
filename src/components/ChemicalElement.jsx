@@ -5,13 +5,10 @@ class ChemicalElement extends Component {
     return this.props.discoveryYear <= this.props.activeYear
   }
 
-  render() {
-    const elementStyle = {
-        display: this.show() ? 'block' : 'none'
-    }
+  elementDisplay() {
     return (
       <span>
-        <a style={elementStyle} href={this.props.wikiLink} title={this.props.elementName}>
+        <a href={this.props.wikiLink} title={this.props.elementName}>
           <span className={`element ${this.props.subcategory} ${this.props.occurrence}`}>
             <span className="element-name-text" dangerouslySetInnerHTML={{__html: this.props.nameText}} />
             <span className={`atomic-number ${this.props.matterState}`}>{this.props.atomicNumber}</span>
@@ -19,6 +16,12 @@ class ChemicalElement extends Component {
           </span>
         </a>
       </span>
+    )
+  }
+
+  render() {
+    return (
+      this.show() ? this.elementDisplay() : null
     )
   }
 }
