@@ -33,7 +33,7 @@ class PeriodicTable extends Component {
 
   play() {
     if (this.state.activeYear === CURRENT_YEAR) {
-      this.state.activeYear = START_YEAR
+      this.setState({activeYear: START_YEAR})
     }
     if (!this.state.timer) {
       this.setState({timer: setInterval(this.incrementYear, 100)})
