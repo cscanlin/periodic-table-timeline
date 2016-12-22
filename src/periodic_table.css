@@ -1,0 +1,174 @@
+.center {
+  text-align:center;
+  vertical-align:middle;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.fit {
+  width: 100%;
+}
+
+.table {
+  border-spacing:1px;
+  background:#f8f8f8;
+  border:1px solid #a9a9a9;
+  width:100%;
+  max-width:1800px;
+  margin:0 auto;
+  padding:2px;
+  vertical-align:top;
+  table-layout:fixed;
+}
+
+.row {
+  height: 72px;
+}
+
+.element-name-text {
+  display: block;
+  color: black;
+  font-size: 85%;
+  height: 2.2em;
+  line-height: 1.1em;
+  vertical-align: top;
+}
+
+.element {
+  display: block;
+  line-height: 1.1em;
+  overflow: hidden;
+  padding: 0 0 2px 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.asterisk {
+  width: 106;
+  height: 98;
+}
+
+.legend-table {
+  width:100%;
+  line-height:120%;
+  text-align:center;
+  vertical-align:top;
+  font-size:85%;
+  background:#f8f8f8;
+  margin:0;
+  border: 1px solid #a2a9b1;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.legend-description {
+  width:1em;
+  text-align:left;
+  padding-right:0.5em;
+}
+
+.legend {
+  background: #e0e0e0;
+  width: 12%;
+}
+
+.atomic-symbol,
+.atomic-number {
+  display: block;
+}
+
+.matter-state {
+  padding: 0 0.5em;
+}
+
+.solid {
+  color:#000000;
+}
+.liquid {
+  color:#008000;
+}
+.gas {
+  color:#ff0000;
+}
+.unknown-matter-state {
+  color: #696969;
+}
+
+.occurrence {
+  width:12%;
+  background:#e0e0e0;
+}
+
+.primordial {
+  border-top:2px solid #8811ff;
+  border-bottom:2px solid #8811ff;
+}
+.from-decay {
+  border-top:2px dashed #773300;
+  border-bottom:2px dashed #773300;
+}
+.synthetic {
+  border-top:2px dotted #4499ff;
+  border-bottom:2px dotted #4499ff;
+}
+
+.category,
+.subcategory {
+  padding:0 1px;
+  height: 20px;
+}
+
+.metal,
+.nonmetal {
+  background:#e0e0e0
+}
+
+.metalloid {
+  background:#cccc99;
+}
+
+.alkali-metal {
+  background:#ff6666;
+}
+
+.alkaline-earth-metal {
+  background:#ffdead;
+}
+
+.lanthanide {
+  background:#ffbfff;
+}
+
+.actinide {
+  background:#ff99cc;
+}
+
+.transition-metal {
+  background:#ffc0c0;
+}
+
+.post-transition-metal {
+  background:#cccccc;
+}
+
+.polyatomic-nonmetal {
+  background:#a1ffc3;
+}
+
+.diatomic-nonmetal {
+  background:#e7ff8f;
+}
+
+.unknown-subcategory {
+  background: #e8e8e8;
+}
+
+.noble-gas {
+  background:#c0ffff;
+}
+
+.discovery-year {
+  font-size: small;
+}
