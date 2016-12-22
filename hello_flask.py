@@ -14,11 +14,10 @@ def periodic_table():
 
 @app.route('/simple-stream')
 def streamed_response():
-    def generate():
-        yield 'Hello '
-        yield request.args['name']
-        yield '!'
     return Response(stream_with_context(generate()))
+
+def generate():
+    yield 'Hello '
 
 @app.route( '/stream' )
 def stream():
@@ -50,6 +49,10 @@ def iter_elements(element_html_template):
         for td in parsed_html('td', attrs={'id':'table-data'}):
             time.sleep(1)
             yield td
+
+@app.route("/hello")
+def hello():
+    return "Hello World!"
 
 if __name__ == "__main__":
     app.run(debug=True)

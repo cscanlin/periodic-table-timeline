@@ -34,7 +34,7 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
 <body>
 	<div id="chart-container" class="stats-container chart-container"></div>
 	<div class="time-range-container">
-		<input style="width: 897px;" id="time-range" type="range" min="1700" max="2015" value="1700" step="1">
+		<input style="width: 897px;" id="time-range" type="range" step="1">
 	</div>
 	<div class="stats-container">
 	  <div style="font-size:20px;">Year: <span id="year"></span></div>
@@ -260,15 +260,23 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
 	var timerOn = false
 	var speed = 0
 	var speedControlOn = false
-	var defaultYear = 1700
-	var year = defaultYear
+	var startYear = 1700
+	var thisYear = new Date().getFullYear()
+	var year = startYear
+
+
+	$(document).ready(function() {
+	    timeRange.attr({
+	       "max" : thisYear,
+	       "min" : startYear,
+	    });
+	});
 
 	$("#year").html(year);
 	$("#speed").html("x" + speed)
 	$("#discovered").html(13)
 	showElement()
 
-	// console.log(timeRange)
 
 	$(document).keydown(function(e) {
 			speedControlOn = true;
@@ -317,10 +325,10 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
 	};
 
 	function updateDoc() {
-		if (year >= 2015) {
-			year = 2015;
+		if (year >= thisYear) {
+			year = thisYear;
 		};
-		$('#time-range').val(year);
+		timeRange.val(year);
 		rounded_year = Math.round(year);
 		$("#year").html(rounded_year);
 		$("#speed").html("x" + displaySpeed());
@@ -342,14 +350,14 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
 		timerOn = true
 	  yearTimer = setInterval(function(){
 			if (speedControlOn == false) {
-				if (year >= defaultYear) {
+				if (year >= startYear) {
 					speed = 8;
 				};
-				if (year < defaultYear) {
+				if (year < startYear) {
 					speed = 1024;
 				};
 			};
-			if (year >= 2015) {
+			if (year >= thisYear) {
 				pause();
 			};
 			year = year + speed/10;
@@ -369,17 +377,16 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
 			speedControlOn = false;
 			timerOn = false;
 			speed = 128;
-			year = defaultYear;
+			year = startYear;
 			updateDoc();
 			showElement();
 	}
 
 	$(function() {
 		var years = [];
-		var total_discovered = [];
-		for (var year = defaultYear; year <= 2015; year++) {
+		var totalDiscovered = [];
+		for (var year = startYear; year <= thisYear; year++) {
 		    years.push(year);
-				console.log(year)
 				var discovered = 0
 				var elements = $('td a[discovery-year]').each(function(i,cell) {
 					var discoveryYear = $(this).attr('discovery-year');
@@ -387,9 +394,20 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
 						discovered = discovered + 1;
 					};
 				});
-				total_discovered.push(discovered)
-				console.log(discovered);
+				totalDiscovered.push(discovered)
 		}
+		maxDiscovered = Math.max.apply(Math, totalDiscovered);
+		numberYears = thisYear - startYear
+		averageDiscoveries = (maxDiscovered-13)/numberYears
+
+		trend = 13
+		var trendline = []
+		for (var year = startYear; year <= thisYear; year++) {
+			trend = trend + averageDiscoveries
+			trendline.push(trend)
+		}
+
+
     $('#chart-container').highcharts({
         chart: {
             type: 'line',
@@ -407,7 +425,12 @@ body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{color:#444;font-famil
         },
         series: [{
             name: 'Elements',
-            data: total_discovered,
+            data: totalDiscovered,
+        },
+				{
+            name: 'Trend',
+            data: trendline,
+						visible: false
         }]
     });
 	});
