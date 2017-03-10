@@ -20,10 +20,10 @@ class Controls extends Component {
   render() {
     return (
       <div className="controls-container">
-        <div className="slider">
+        <div className="slider-container">
           <input
-            style={{width: "897px"}}
             id="time-range"
+            className="fit"
             type="range"
             min="1700"
             max="2015"

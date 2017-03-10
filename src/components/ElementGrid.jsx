@@ -24,77 +24,77 @@ class ElementGrid extends Component {
     return (
       <tbody>
         <tr className="row">
-          <td>{this.displayElement("hydrogen")}</td>
+          {this.displayElement("hydrogen")}
           <td colSpan="17"></td>
-          <td>{this.displayElement("helium")}</td>
+          {this.displayElement("helium")}
         </tr>
         <tr className="row">
-          <td>{this.displayElement("lithium")}</td>
-          <td>{this.displayElement("beryllium")}</td>
+          {this.displayElement("lithium")}
+          {this.displayElement("beryllium")}
           <td colSpan="11"></td>
-          <td>{this.displayElement("boron")}</td>
-          <td>{this.displayElement("carbon")}</td>
-          <td>{this.displayElement("nitrogen")}</td>
-          <td>{this.displayElement("oxygen")}</td>
-          <td>{this.displayElement("fluorine")}</td>
-          <td>{this.displayElement("neon")}</td>
+          {this.displayElement("boron")}
+          {this.displayElement("carbon")}
+          {this.displayElement("nitrogen")}
+          {this.displayElement("oxygen")}
+          {this.displayElement("fluorine")}
+          {this.displayElement("neon")}
         </tr>
         <tr className="row">
-          <td>{this.displayElement("sodium")}</td>
-          <td>{this.displayElement("magnesium")}</td>
+          {this.displayElement("sodium")}
+          {this.displayElement("magnesium")}
           <td colSpan="11"></td>
-          <td>{this.displayElement("aluminium")}</td>
-          <td>{this.displayElement("silicon")}</td>
-          <td>{this.displayElement("phosphorus")}</td>
-          <td>{this.displayElement("sulfur")}</td>
-          <td>{this.displayElement("chlorine")}</td>
-          <td>{this.displayElement("argon")}</td>
+          {this.displayElement("aluminium")}
+          {this.displayElement("silicon")}
+          {this.displayElement("phosphorus")}
+          {this.displayElement("sulfur")}
+          {this.displayElement("chlorine")}
+          {this.displayElement("argon")}
         </tr>
         <tr className="row">
-          <td>{this.displayElement("potassium")}</td>
-          <td>{this.displayElement("calcium")}</td>
+          {this.displayElement("potassium")}
+          {this.displayElement("calcium")}
           <td></td>
-          <td>{this.displayElement("scandium")}</td>
-          <td>{this.displayElement("titanium")}</td>
-          <td>{this.displayElement("vanadium")}</td>
-          <td>{this.displayElement("chromium")}</td>
-          <td>{this.displayElement("manganese")}</td>
-          <td>{this.displayElement("iron")}</td>
-          <td>{this.displayElement("cobalt")}</td>
-          <td>{this.displayElement("nickel")}</td>
-          <td>{this.displayElement("copper")}</td>
-          <td>{this.displayElement("zinc")}</td>
-          <td>{this.displayElement("gallium")}</td>
-          <td>{this.displayElement("germanium")}</td>
-          <td>{this.displayElement("arsenic")}</td>
-          <td>{this.displayElement("selenium")}</td>
-          <td>{this.displayElement("bromine")}</td>
-          <td>{this.displayElement("krypton")}</td>
+          {this.displayElement("scandium")}
+          {this.displayElement("titanium")}
+          {this.displayElement("vanadium")}
+          {this.displayElement("chromium")}
+          {this.displayElement("manganese")}
+          {this.displayElement("iron")}
+          {this.displayElement("cobalt")}
+          {this.displayElement("nickel")}
+          {this.displayElement("copper")}
+          {this.displayElement("zinc")}
+          {this.displayElement("gallium")}
+          {this.displayElement("germanium")}
+          {this.displayElement("arsenic")}
+          {this.displayElement("selenium")}
+          {this.displayElement("bromine")}
+          {this.displayElement("krypton")}
         </tr>
         <tr className="row">
-          <td>{this.displayElement("rubidium")}</td>
-          <td>{this.displayElement("strontium")}</td>
+          {this.displayElement("rubidium")}
+          {this.displayElement("strontium")}
           <td></td>
-          <td>{this.displayElement("yttrium")}</td>
-          <td>{this.displayElement("zirconium")}</td>
-          <td>{this.displayElement("niobium")}</td>
-          <td>{this.displayElement("molybdenum")}</td>
-          <td>{this.displayElement("technetium")}</td>
-          <td>{this.displayElement("ruthenium")}</td>
-          <td>{this.displayElement("rhodium")}</td>
-          <td>{this.displayElement("palladium")}</td>
-          <td>{this.displayElement("silver")}</td>
-          <td>{this.displayElement("cadmium")}</td>
-          <td>{this.displayElement("indium")}</td>
-          <td>{this.displayElement("tin")}</td>
-          <td>{this.displayElement("antimony")}</td>
-          <td>{this.displayElement("tellurium")}</td>
-          <td>{this.displayElement("iodine")}</td>
-          <td>{this.displayElement("xenon")}</td>
+          {this.displayElement("yttrium")}
+          {this.displayElement("zirconium")}
+          {this.displayElement("niobium")}
+          {this.displayElement("molybdenum")}
+          {this.displayElement("technetium")}
+          {this.displayElement("ruthenium")}
+          {this.displayElement("rhodium")}
+          {this.displayElement("palladium")}
+          {this.displayElement("silver")}
+          {this.displayElement("cadmium")}
+          {this.displayElement("indium")}
+          {this.displayElement("tin")}
+          {this.displayElement("antimony")}
+          {this.displayElement("tellurium")}
+          {this.displayElement("iodine")}
+          {this.displayElement("xenon")}
         </tr>
         <tr className="row">
-          <td>{this.displayElement("caesium")}</td>
-          <td>{this.displayElement("barium")}</td>
+          {this.displayElement("caesium")}
+          {this.displayElement("barium")}
           <td className="center asterisk">
             <img
               style={{display: this.showSingleRow() ? 'inline': 'none'}}
@@ -102,26 +102,26 @@ class ElementGrid extends Component {
               src={SINGLE_ASTERISK}
             />
           </td>
-          <td>{this.displayElement("lutetium")}</td>
-          <td>{this.displayElement("hafnium")}</td>
-          <td>{this.displayElement("tantalum")}</td>
-          <td>{this.displayElement("tungsten")}</td>
-          <td>{this.displayElement("rhenium")}</td>
-          <td>{this.displayElement("osmium")}</td>
-          <td>{this.displayElement("iridium")}</td>
-          <td>{this.displayElement("platinum")}</td>
-          <td>{this.displayElement("gold")}</td>
-          <td>{this.displayElement("mercury")}</td>
-          <td>{this.displayElement("thallium")}</td>
-          <td>{this.displayElement("lead")}</td>
-          <td>{this.displayElement("bismuth")}</td>
-          <td>{this.displayElement("polonium")}</td>
-          <td>{this.displayElement("astatine")}</td>
-          <td>{this.displayElement("radon")}</td>
+          {this.displayElement("lutetium")}
+          {this.displayElement("hafnium")}
+          {this.displayElement("tantalum")}
+          {this.displayElement("tungsten")}
+          {this.displayElement("rhenium")}
+          {this.displayElement("osmium")}
+          {this.displayElement("iridium")}
+          {this.displayElement("platinum")}
+          {this.displayElement("gold")}
+          {this.displayElement("mercury")}
+          {this.displayElement("thallium")}
+          {this.displayElement("lead")}
+          {this.displayElement("bismuth")}
+          {this.displayElement("polonium")}
+          {this.displayElement("astatine")}
+          {this.displayElement("radon")}
         </tr>
         <tr className="row">
-          <td>{this.displayElement("francium")}</td>
-          <td>{this.displayElement("radium")}</td>
+          {this.displayElement("francium")}
+          {this.displayElement("radium")}
           <td className="center asterisk">
             <img
               style={{display: this.showDoubleRow() ? 'inline': 'none'}}
@@ -129,22 +129,22 @@ class ElementGrid extends Component {
               src={DOUBLE_ASTERISK}
             />
           </td>
-          <td>{this.displayElement("lawrencium")}</td>
-          <td>{this.displayElement("rutherfordium")}</td>
-          <td>{this.displayElement("dubnium")}</td>
-          <td>{this.displayElement("seaborgium")}</td>
-          <td>{this.displayElement("bohrium")}</td>
-          <td>{this.displayElement("hassium")}</td>
-          <td>{this.displayElement("meitnerium")}</td>
-          <td>{this.displayElement("darmstadtium")}</td>
-          <td>{this.displayElement("roentgenium")}</td>
-          <td>{this.displayElement("copernicium")}</td>
-          <td>{this.displayElement("nihonium")}</td>
-          <td>{this.displayElement("flerovium")}</td>
-          <td>{this.displayElement("moscovium")}</td>
-          <td>{this.displayElement("livermorium")}</td>
-          <td>{this.displayElement("tennessine")}</td>
-          <td>{this.displayElement("oganesson")}</td>
+          {this.displayElement("lawrencium")}
+          {this.displayElement("rutherfordium")}
+          {this.displayElement("dubnium")}
+          {this.displayElement("seaborgium")}
+          {this.displayElement("bohrium")}
+          {this.displayElement("hassium")}
+          {this.displayElement("meitnerium")}
+          {this.displayElement("darmstadtium")}
+          {this.displayElement("roentgenium")}
+          {this.displayElement("copernicium")}
+          {this.displayElement("nihonium")}
+          {this.displayElement("flerovium")}
+          {this.displayElement("moscovium")}
+          {this.displayElement("livermorium")}
+          {this.displayElement("tennessine")}
+          {this.displayElement("oganesson")}
         </tr>
         <tr className="row">
           <td colSpan="19" style={{height: '1.4em'}}></td>
@@ -159,20 +159,20 @@ class ElementGrid extends Component {
               src={SINGLE_ASTERISK}
             />
           </td>
-          <td>{this.displayElement("lanthanum")}</td>
-          <td>{this.displayElement("cerium")}</td>
-          <td>{this.displayElement("praseodymium")}</td>
-          <td>{this.displayElement("neodymium")}</td>
-          <td>{this.displayElement("promethium")}</td>
-          <td>{this.displayElement("samarium")}</td>
-          <td>{this.displayElement("europium")}</td>
-          <td>{this.displayElement("gadolinium")}</td>
-          <td>{this.displayElement("terbium")}</td>
-          <td>{this.displayElement("dysprosium")}</td>
-          <td>{this.displayElement("holmium")}</td>
-          <td>{this.displayElement("erbium")}</td>
-          <td>{this.displayElement("thulium")}</td>
-          <td>{this.displayElement("ytterbium")}</td>
+          {this.displayElement("lanthanum")}
+          {this.displayElement("cerium")}
+          {this.displayElement("praseodymium")}
+          {this.displayElement("neodymium")}
+          {this.displayElement("promethium")}
+          {this.displayElement("samarium")}
+          {this.displayElement("europium")}
+          {this.displayElement("gadolinium")}
+          {this.displayElement("terbium")}
+          {this.displayElement("dysprosium")}
+          {this.displayElement("holmium")}
+          {this.displayElement("erbium")}
+          {this.displayElement("thulium")}
+          {this.displayElement("ytterbium")}
         </tr>
         <tr className="row">
           <td></td>
@@ -184,20 +184,20 @@ class ElementGrid extends Component {
               src={DOUBLE_ASTERISK}
             />
           </td>
-          <td>{this.displayElement("actinium")}</td>
-          <td>{this.displayElement("thorium")}</td>
-          <td>{this.displayElement("protactinium")}</td>
-          <td>{this.displayElement("uranium")}</td>
-          <td>{this.displayElement("neptunium")}</td>
-          <td>{this.displayElement("plutonium")}</td>
-          <td>{this.displayElement("americium")}</td>
-          <td>{this.displayElement("curium")}</td>
-          <td>{this.displayElement("berkelium")}</td>
-          <td>{this.displayElement("californium")}</td>
-          <td>{this.displayElement("einsteinium")}</td>
-          <td>{this.displayElement("fermium")}</td>
-          <td>{this.displayElement("mendelevium")}</td>
-          <td>{this.displayElement("nobelium")}</td>
+          {this.displayElement("actinium")}
+          {this.displayElement("thorium")}
+          {this.displayElement("protactinium")}
+          {this.displayElement("uranium")}
+          {this.displayElement("neptunium")}
+          {this.displayElement("plutonium")}
+          {this.displayElement("americium")}
+          {this.displayElement("curium")}
+          {this.displayElement("berkelium")}
+          {this.displayElement("californium")}
+          {this.displayElement("einsteinium")}
+          {this.displayElement("fermium")}
+          {this.displayElement("mendelevium")}
+          {this.displayElement("nobelium")}
         </tr>
       </tbody>
     )

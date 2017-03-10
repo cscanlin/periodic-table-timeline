@@ -1,3 +1,7 @@
+.periodic-table {
+  min-width: 640px;
+}
+
 .center {
   text-align:center;
   vertical-align:middle;
@@ -25,6 +29,14 @@
 
 .row {
   height: 89px;
+}
+
+.element-cell {
+ padding: 1px;
+}
+
+.element-container {
+  min-width: 25px;
 }
 
 .element-name-text {
@@ -170,5 +182,11 @@
 }
 
 .discovery-year {
-  font-size: small;
+  font-size: x-small;
+}
+
+@media only screen and (max-width: 750px) {
+  .hide-mobile {
+    display: none;
+  }
 }
