@@ -189,4 +189,7 @@
   .hide-mobile {
     display: none;
   }
+  .row {
+    height: 42px;
+  }
 }
